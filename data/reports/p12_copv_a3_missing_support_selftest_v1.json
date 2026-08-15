@@ -1,0 +1,11 @@
+{
+  "schema_version": "p12-copv-a3-missing-support-selftest-v1",
+  "status": "pass",
+  "checks": {
+    "missing_pressure_raises_narrow_exception": true,
+    "temporary_h5_deleted": true,
+    "invalid_condition_retained": true,
+    "invalid_condition_not_supported": true,
+    "invalid_condition_abstains": true
+  }
+}

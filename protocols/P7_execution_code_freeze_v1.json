@@ -1,0 +1,30 @@
+{
+  "schema_version": "p7-execution-code-freeze-v1",
+  "frozen_local_time": "2026-08-10T23:41:08.4924269+08:00",
+  "protocol_freeze_v1_1_sha256": "570036f8201371edff7cba9f2b9e350f72726a1d8b9901f00d19908b9dbab4fa",
+  "future_data_access_state": {
+    "official_bytes_may_be_in_transport": true,
+    "any_future_pickle_loaded": false,
+    "any_future_zarr_created": false,
+    "any_future_wave_statistic_computed": false,
+    "any_future_model_score_computed": false,
+    "any_future_label_stratified_result_seen": false
+  },
+  "sha256": {
+    "configs/p7_confirmatory_v1/P7-CONFIRM-D7-D13-v1.1.yaml": "1e64231c8979132604daa7d1a145c021233066b154b0d76ac9df27389569a2aa",
+    "configs/p7_confirmatory_v1/P7-TRAIN-01.yaml": "ca8a7eb63bc96fb865683165b6f28b0c31a6c1dcba89454325e7d99013404277",
+    "configs/p7_confirmatory_v1/P7-RESCORE-01.yaml": "c560be23ad94288368fdc9d39bd1b56880394459e9a4207b0e5d7146819e9602",
+    "src/run_p7_confirmatory_train.py": "375eee95450edbbcf117abc8da4f55aecd7b178fe2f20de55486df69b046f6c5",
+    "src/export_p7_confirmatory_scores.py": "7c96b39a5d9082c17b61d58c7428a1324f84961581abe6197468649aa2fd6d56",
+    "tools/build_p7_confirmation_manifest.py": "713f93e315f6246b2e06fda8745ff49bb20ab95044564f0f098ce7bfa93850b6",
+    "tools/preflight_p7_confirmatory.py": "6748ef79499e016b693e6409b7005ac1b698b4cac8c8607cba37b57119c55d21",
+    "tools/analyze_p7_confirmatory.py": "1d8bbb55e7f6fcd962e79ddb9643a0bb50616f85197662b0b12f52b410082058",
+    "tools/run_p7_classical_baselines.py": "0d1dd065968893d2ecfd634d7c0c67513a55fe83c4300490e2040849a0c11627",
+    "tools/run_p7_block_crossconformal.py": "f792208dfe89dce2b9f2d9dc58ba2d155959f62b3f1b6230f51344db418d247d",
+    "tools/merge_p7_confirmatory_comparators.py": "bb4070835453fceefac9b160161e73726ee6d1a1e989e2a89ee423d3bccd4851",
+    "tools/run_event_classical_baselines.py": "847e65d00c00ca2dafcf60b663043888261526560ffe8b47e80e4d2dd3ffcd81",
+    "tools/run_event_block_crossconformal.py": "757d66e714387a2863f27a73b1c6e420122830dda94c6d6b5317a771117d4255",
+    "pbs/32_p7_confirmatory_train_rescore_serial.pbs": "f1e90d884179acf69e5c8a3d39cff3f430714514de1051aed8304da2a090d52b"
+  },
+  "post_freeze_policy": "Only audited execution-blocking bug fixes are permitted. Any change informed by D7-D13 scores is exploratory and invalidates confirmatory relabeling."
+}

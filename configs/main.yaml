@@ -1,0 +1,47 @@
+project: envwave_ssl_main
+seed: 20260809
+data:
+  root: data/zarr
+  paths: 8
+  samples_per_wave: 2000
+  train_period: ["2019_01_01", "2020_12_31"]
+  validation_period: ["2021_01_01", "2021_04_16"]
+  test_period: ["2021_04_17", "2022_10_31"]
+  healthy_tag: 0
+  normalize_from_train_only: true
+  temporal_stride: 1
+  exclude_2018_from_main_training: true
+model:
+  name: envwave_ssl
+  embedding_dim: 192
+  transformer_layers: 4
+  attention_heads: 6
+  mask_ratio: 0.35
+  environment_dim: 6
+  dropout: 0.1
+loss:
+  reconstruction: 1.0
+  vicreg_invariance: 0.5
+  vicreg_variance: 0.1
+  vicreg_covariance: 0.02
+  environment_adversary: 0.2
+  environment_prediction: 0.2
+  latent_orthogonality: 0.05
+  path_consistency: 0.2
+training:
+  batch_size: 128
+  epochs: 200
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  workers: 16
+  mixed_precision: true
+  gradient_clip: 1.0
+  early_stopping_patience: 25
+  seeds: [20260809, 20260810, 20260811, 20260812]
+evaluation:
+  target_false_alarms_per_month: [1, 5, 10]
+  bootstrap_samples: 2000
+  confidence_level: 0.95
+  calibration: conformal_block
+  block_hours: 24
+  stress_tests: [rain, snow, extreme_temperature, sensor_drift, installation_shift, missing_path]

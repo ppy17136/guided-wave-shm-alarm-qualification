@@ -1,0 +1,91 @@
+{
+  "schema_version": "p12-copv-lock1-freeze-v1",
+  "freeze_date": "2026-08-11",
+  "status": "scientific_protocol_frozen_before_large_archives_arrive",
+  "numeric_data_unsealed": false,
+  "confirmatory_dataset": {
+    "baseline_record": "https://zenodo.org/records/17776240",
+    "damage_record": "https://zenodo.org/records/17782123",
+    "license": "CC-BY-4.0",
+    "publication_date": "2026-01-16"
+  },
+  "required_primary_archives": [
+    {
+      "name": "Baseline.zip",
+      "bytes": 20109358425,
+      "md5": "c57efcd712d82c9f735dce969176699e",
+      "present_at_lock1": false,
+      "url": "https://zenodo.org/records/17776240/files/Baseline.zip?download=1"
+    },
+    {
+      "name": "Irreversible_Damage.zip",
+      "bytes": 20276822123,
+      "md5": "5bb46c4e92d5e873f2936e706001c366",
+      "present_at_lock1": false,
+      "url": "https://zenodo.org/records/17782123/files/Irreversible_Damage.zip?download=1"
+    }
+  ],
+  "optional_secondary_archive": {
+    "name": "Reversible_Damage.zip",
+    "bytes": 20410262593,
+    "md5": "928e331d7b8fd4b3b2ca2189d57c5f79",
+    "present_at_lock1": false,
+    "url": "https://zenodo.org/records/17782123/files/Reversible_Damage.zip?download=1"
+  },
+  "frozen_files": [
+    {
+      "path": "research_protocols/P12_COPV_candidate_source_audit_20260811.md",
+      "bytes": 6081,
+      "sha256": "cd0dfe74f35c4afe2c1f41085150a523b5fa5db74fce464ef0e91c61698da512"
+    },
+    {
+      "path": "research_protocols/P12_COPV_confirmatory_preregistration_v1.md",
+      "bytes": 11057,
+      "sha256": "a9240b3056d6de29658cf841137b33f9af77d626750aed5c5c687fa2fa3b66b4"
+    },
+    {
+      "path": "research_protocols/P12_DUAL_GATE_PROTOTYPE_FREEZE_v1.json",
+      "bytes": 2082,
+      "sha256": "a477430622aed8d599bc6aef65321f72a593ea7465b95cd82908fe45dd185ff8"
+    },
+    {
+      "path": "src/dual_gate_alarm.py",
+      "bytes": 12668,
+      "sha256": "5c2025b0b8693f9cb7f2cb271f877e84ff8cc72ce4629a19d20f9f544eca27cb"
+    },
+    {
+      "path": "_references/COPV_Repository_Documentation_v1.pdf",
+      "bytes": 20442614,
+      "md5": "9cf3ce371c583d2414a8d996c7176e4c",
+      "sha256": "238b3a8ccd3d689759086620ff4f9cb33d572ec737caa667b413597df3bca77f"
+    }
+  ],
+  "primary_analysis_frozen": {
+    "tone_burst_frequencies_khz": [60, 120, 180, 260, 300],
+    "chirp_role": "secondary_only",
+    "excluded_sensor_all_states": 20,
+    "reference_ramp": "healthy_descending_50_to_700_bar",
+    "calibration_random_pressures_bar": [100, 200, 300, 400, 500, 600, 700],
+    "heldout_healthy_random_pressures_bar": [50, 150, 250, 350, 450, 550, 650],
+    "path_aggregation": "mean_of_top_5_percent_valid_path_DI",
+    "threshold": "median_plus_6_times_1.4826_MAD_per_frequency",
+    "maximum_loo_block_threshold_relative_range": 0.25,
+    "support_features": ["H5_pressure", "median_H5_surface_temperature"],
+    "support_quantile": 0.99,
+    "repeat_confirmation": "2_of_3",
+    "frequency_fusion": "at_least_4_available_and_3_confirmed_of_5"
+  },
+  "permitted_next_actions": [
+    "download archives without opening them",
+    "verify exact bytes, official MD5, and local SHA256",
+    "inventory ZIP central directories after integrity verification",
+    "read official JSON and H5 key names, shapes, dtypes, and attributes only",
+    "write a schema-only A1 amendment and freeze execution code"
+  ],
+  "forbidden_before_lock2": [
+    "read Data/Raw Data numeric values",
+    "compute waveform statistics, anomaly scores, AUROC, FPR, or recall",
+    "select frequencies, paths, temperatures, pressures, thresholds, or fusion rules from outcomes",
+    "change primary endpoints based on data"
+  ]
+}

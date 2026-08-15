@@ -1,0 +1,52 @@
+{
+  "schema_version": "p12-dual-gate-prototype-freeze-v1",
+  "freeze_date": "2026-08-11",
+  "status": "prototype_frozen_synthetic_selftest_only",
+  "scientific_scope": "health-only calibration audit, environmental-operational support assessment, explicit abstention, and 2-of-3 sequential alarm",
+  "confirmatory_claim": false,
+  "data_used_for_selftest": "deterministic synthetic data only",
+  "p11b_scores_used_for_parameter_selection": false,
+  "default_parameters": {
+    "hampel_multiplier": 6.0,
+    "minimum_calibration_samples": 100,
+    "minimum_calibration_blocks": 10,
+    "maximum_leave_one_block_threshold_relative_range": 0.25,
+    "support_k": "clip(ceil(sqrt(n_reference)), 5, 30)",
+    "support_distance_quantile": 0.99,
+    "block_support_coverage": 0.90,
+    "sequential_window": 3,
+    "sequential_required": 2
+  },
+  "files": [
+    {
+      "path": "research_protocols/P12_dual_gate_support_aware_alarm_protocol_v1.md",
+      "bytes": 5648,
+      "sha256": "ad3e627f77d4c944460bd8fd877260d328a3d8e38786a03030c1a45ee9ba7348"
+    },
+    {
+      "path": "src/dual_gate_alarm.py",
+      "bytes": 12668,
+      "sha256": "5c2025b0b8693f9cb7f2cb271f877e84ff8cc72ce4629a19d20f9f544eca27cb"
+    },
+    {
+      "path": "tools/selftest_p12_dual_gate.py",
+      "bytes": 3822,
+      "sha256": "b58f17726f43e980e1e52d3722108af5abe9434f8439c3c442bce408abf92ccc"
+    },
+    {
+      "path": "data/reports/p12_dual_gate_selftest_v1.json",
+      "bytes": 1070,
+      "sha256": "817fb9d8cc37154050641fa85f74da7d59487dab2b6b3f0ca88a78c3b7b50505"
+    }
+  ],
+  "selftest_status": "pass_8_of_8",
+  "required_before_external_confirmation": [
+    "freeze dataset identity and license",
+    "freeze train-calibration-reference-test-event boundaries",
+    "freeze numeric and categorical support features",
+    "freeze physical block length and constant-feature tolerances",
+    "freeze FPR, recall, delay, support-coverage, and abstention-rate endpoints",
+    "complete schema-only audit and freeze the dataset reader",
+    "compute a new execution LOCK before numerical unsealing"
+  ]
+}

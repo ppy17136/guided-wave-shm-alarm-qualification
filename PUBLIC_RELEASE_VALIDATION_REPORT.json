@@ -1,0 +1,33 @@
+{
+  "schema_version": "shm-public-release-validation-v2",
+  "release_version": "1.0.0",
+  "status": "validated_public_release",
+  "validation_date": "2026-08-15",
+  "file_count": 279,
+  "static_counts": {
+    "python": 82,
+    "json": 24,
+    "yaml_and_cff": 78,
+    "csv": 14,
+    "pdf": 5,
+    "png": 5
+  },
+  "static_errors": [],
+  "synthetic_selftests": {
+    "passed": 6,
+    "total": 6
+  },
+  "derived_evidence_checks": {
+    "passed": 2,
+    "total": 2
+  },
+  "clean_room_figure_rebuild": {
+    "png": 5,
+    "pdf": 5,
+    "status": "pass"
+  },
+  "privacy_or_secret_findings": [],
+  "raw_data_or_archive_findings": [],
+  "files_over_5_mib": [],
+  "checksum_errors": []
+}

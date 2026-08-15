@@ -1,0 +1,26 @@
+{
+  "schema_version": "p12-copv-a3-coverage-denominator-selftest-v1",
+  "status": "pass",
+  "checks": {
+    "twenty_eight_main_t37_h5_invalid": true,
+    "invalids_remain_in_coverage_denominator": true,
+    "t37_temperature_coverage_zero": true,
+    "support_coverage_gate_fails": true,
+    "primary_status_fails": true,
+    "supported_damage_scores_still_analyzable": true
+  },
+  "expected_damage_coverage": 0.8333333333333334,
+  "reported_coverage": {
+    "healthy": 1.0,
+    "irreversible": 0.8333333333333334,
+    "by_temperature": {
+      "25": 1.0,
+      "31": 1.0,
+      "37": 0.0,
+      "43": 1.0,
+      "49": 1.0,
+      "55": 1.0
+    }
+  },
+  "primary_status": "FAIL"
+}

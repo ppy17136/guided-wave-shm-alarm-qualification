@@ -1,0 +1,38 @@
+name: reproducibility-smoke-tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install CPU validation dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements-ci.txt
+      - name: Static repository validation
+        run: python scripts/validate_repository_static.py
+      - name: Synthetic alarm qualification tests
+        run: |
+          python scripts/selftest_p12_dual_gate.py
+          python scripts/selftest_p12_copv_pipeline.py
+          python scripts/selftest_p12_copv_confirmatory_analysis.py
+          python scripts/selftest_p12_copv_a2_frequency_mapping.py
+          python scripts/selftest_p12_copv_a3_missing_support.py
+          python scripts/selftest_p12_copv_a3_coverage_denominator.py
+      - name: Derived evidence checks
+        run: |
+          python scripts/build_p12_structural_energy_uncertainty.py --check
+          python scripts/build_p12_acquisition_integrity_audit.py --check
+      - name: Clean-room manuscript asset rebuild
+        run: |
+          python scripts/build_ranking_alarmability_manuscript_assets_v6.py --output-root "$RUNNER_TEMP/shm-assets"
+          test -s "$RUNNER_TEMP/shm-assets/figures/fig01_qualification_chain_and_p12_headline.png"
+          test -s "$RUNNER_TEMP/shm-assets/figures/fig05_p12_gate_dashboard.pdf"

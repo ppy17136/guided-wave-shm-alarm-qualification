@@ -1,0 +1,32 @@
+# Guided-wave SHM alarm qualification
+
+Reproducibility package for **High AUROC Does Not Guarantee Reliable Alarms: Calibration- and Support-Aware Validation of Guided-Wave SHM under Operational Shift**.
+
+## Status
+
+This repository provides the versioned analysis and reporting materials for release `v1.0.0`. The repository materials are distributed under the BSD-3-Clause license.
+
+## Included
+
+Analysis source, frozen configurations, hash-locked protocols, an English accessibility translation with clause-to-gate mapping, derived result tables, machine-readable integrity evidence, figure-generation code, and publication figures.
+
+## Excluded
+
+Raw datasets, copyrighted papers, non-public source materials, vendor environments, checkpoints, cluster logs, institutional paths, and large local archives. Obtain raw data from `DATA_SOURCES.md`.
+
+## Principal frozen result
+
+External COPV confirmation: structural macro AUROC 0.9890; supported healthy alarms 0/39; supported irreversible-damage recall 67/132 = 0.5076; damage support 132/168 = 0.7857; structural-minus-energy AUROC -0.0065; 7/13 mandatory gates passed; strict outcome FAIL.
+
+## Protocol terminology and provenance
+
+Earlier frozen files use “preregistration” as project terminology. The protocol was prospectively pre-specified and hash-locked before outcome inspection but was not deposited in an external public registry before execution. The manuscript therefore uses “prospectively pre-specified” rather than claiming formal public preregistration.
+
+## Automated validation
+
+The repository includes a CPU-only GitHub Actions workflow, a static repository validator, six synthetic P12 alarm-qualification tests, two result-evidence checks, and a clean-room rebuild of all five manuscript figures. Run the commands in `REPRODUCE.md` after regenerating `SHA256SUMS.txt`. The reporting checks do not refit a model, move a threshold, or alter a frozen outcome.
+
+## Release controls
+
+Licensing, third-party attribution, technical validation, and citation metadata are documented in `LICENSE`, `THIRD_PARTY_NOTICES.md`, `PUBLIC_RELEASE_VALIDATION_REPORT.md`, and `CITATION.cff`.
+

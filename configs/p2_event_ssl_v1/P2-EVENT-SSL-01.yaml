@@ -1,0 +1,39 @@
+schema_version: p2-event-ssl-v1
+job:
+  id: P2-EVENT-SSL-01
+  title: Causal dual-branch SSL evaluation across D1-D6 guided-wave damage events
+data:
+  event_manifest: data/reports/damage_event_protocol_v1/damage_event_manifest.json
+  train_days: [-15, -8]
+  calibration_days: [-8, -5]
+  pre_event_days: [-5, 0]
+  post_event_days: [0, 5]
+model:
+  embedding_dim: 192
+  transformer_layers: 4
+  attention_heads: 6
+  dropout: 0.10
+  mask_ratio: 0.35
+  mask_block_samples: 80
+training:
+  seeds: [20260809, 20260810, 20260811, 20260812, 20260813]
+  batch_size: 64
+  workers: 8
+  epochs: 50
+  patience: 8
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  mixed_precision: true
+  loss_weights: [1.0, 0.35, 0.15, 0.02]
+evaluation:
+  threshold_quantile: 0.999
+  consecutive_alarms: 3
+runtime:
+  output_dir: runs/p2_event_ssl_v1/01
+  smoke_output_dir: runs/p2_event_ssl_v1_smoke/01
+  expected_events: 7
+  expected_seed_results: 35
+integrity:
+  post_event_excluded_from_training: true
+  post_event_excluded_from_model_selection: true
+  post_event_excluded_from_threshold_calibration: true

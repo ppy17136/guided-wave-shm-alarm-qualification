@@ -1,0 +1,15 @@
+name: envwave-ssl-p1
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch=2.4.*
+  - pytorch-cuda=12.4
+  - numpy=1.26.*
+  - zarr=2.18.*
+  - numcodecs>=0.12,<0.16
+  - pyyaml>=6,<7
+  - pip
+

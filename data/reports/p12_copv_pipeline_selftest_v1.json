@@ -1,0 +1,23 @@
+{
+  "schema_version": "p12-copv-pipeline-selftest-v1",
+  "status": "pass",
+  "checks": {
+    "directed_channel_map_600": true,
+    "sensor20_mask_leaves_552": true,
+    "five_frequencies_three_repeats": true,
+    "lag_recovered_exactly": true,
+    "gain_invariance": true,
+    "damage_residual_increases": true,
+    "butterworth_bandpass_finite": true,
+    "two_of_three_confirmation": true,
+    "three_of_five_fusion": true,
+    "insufficient_frequency_support_abstains": true
+  },
+  "numeric": {
+    "maximum_clean_gain_matched_DI": 0.0006364674190990627,
+    "median_clean_energy_change": 0.2971203327178955,
+    "clean_top_score": 0.0006245932308956981,
+    "damaged_top_score": 1.3427438139915466,
+    "recovered_lag": 3
+  }
+}

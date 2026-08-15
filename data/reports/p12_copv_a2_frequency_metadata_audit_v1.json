@@ -1,0 +1,203 @@
+{
+  "schema_version": "p12-copv-a2-frequency-metadata-audit-v1",
+  "status": "pass",
+  "checks": {
+    "three_archives_audited": true,
+    "all_index_rows_have_240_fourth_group": true,
+    "all_excitation_lists_have_260_fourth_frequency": true,
+    "all_burst_indices_are_1_to_15": true,
+    "all_chirp_indices_are_16_to_18": true,
+    "raw_numeric_values_never_read": true
+  },
+  "records": [
+    {
+      "role": "baseline",
+      "member": "T49_Baseline/25-06-04_16-06-50_GW_Baseline_T49_700bar.h5",
+      "index_frequency_vs_repetition": [
+        [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0,
+          15.0
+        ],
+        [
+          60000.0,
+          60000.0,
+          60000.0,
+          120000.0,
+          120000.0,
+          120000.0,
+          180000.0,
+          180000.0,
+          180000.0,
+          240000.0,
+          240000.0,
+          240000.0,
+          300000.0,
+          300000.0,
+          300000.0
+        ]
+      ],
+      "signal_frequency_burst_hz": [
+        60000.0,
+        120000.0,
+        180000.0,
+        260000.0,
+        300000.0
+      ],
+      "index_chirp_vs_repetition": [
+        [
+          16.0,
+          17.0,
+          18.0
+        ]
+      ],
+      "sampling_frequency_hz": [
+        2976190.476190476
+      ],
+      "raw_dataset_shape_only": [
+        18,
+        600,
+        7552
+      ],
+      "raw_numeric_values_read": false
+    },
+    {
+      "role": "irreversible",
+      "member": "T55_Irreversible_Damage/25-06-17_14-35-04_GW_ID_T55_700bar.h5",
+      "index_frequency_vs_repetition": [
+        [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0,
+          15.0
+        ],
+        [
+          60000.0,
+          60000.0,
+          60000.0,
+          120000.0,
+          120000.0,
+          120000.0,
+          180000.0,
+          180000.0,
+          180000.0,
+          240000.0,
+          240000.0,
+          240000.0,
+          300000.0,
+          300000.0,
+          300000.0
+        ]
+      ],
+      "signal_frequency_burst_hz": [
+        60000.0,
+        120000.0,
+        180000.0,
+        260000.0,
+        300000.0
+      ],
+      "index_chirp_vs_repetition": [
+        [
+          16.0,
+          17.0,
+          18.0
+        ]
+      ],
+      "sampling_frequency_hz": [
+        2976190.476190476
+      ],
+      "raw_dataset_shape_only": [
+        18,
+        600,
+        7552
+      ],
+      "raw_numeric_values_read": false
+    },
+    {
+      "role": "reversible",
+      "member": "T49_Reversible_Damage/25-06-11_13-56-06_GW_RD_T49_700bar.h5",
+      "index_frequency_vs_repetition": [
+        [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0,
+          15.0
+        ],
+        [
+          60000.0,
+          60000.0,
+          60000.0,
+          120000.0,
+          120000.0,
+          120000.0,
+          180000.0,
+          180000.0,
+          180000.0,
+          240000.0,
+          240000.0,
+          240000.0,
+          300000.0,
+          300000.0,
+          300000.0
+        ]
+      ],
+      "signal_frequency_burst_hz": [
+        60000.0,
+        120000.0,
+        180000.0,
+        260000.0,
+        300000.0
+      ],
+      "index_chirp_vs_repetition": [
+        [
+          16.0,
+          17.0,
+          18.0
+        ]
+      ],
+      "sampling_frequency_hz": [
+        2976190.476190476
+      ],
+      "raw_dataset_shape_only": [
+        18,
+        600,
+        7552
+      ],
+      "raw_numeric_values_read": false
+    }
+  ]
+}

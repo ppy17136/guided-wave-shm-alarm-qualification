@@ -1,0 +1,69 @@
+{
+  "schema_version": "p12-copv-schema-audit-public-summary-v1",
+  "derivation_role": "compact_public_summary_of_preexisting_lock1_schema_audit",
+  "official_json_records_sha256": "96fd1c5d1786a54c738ca9aad60958046b8c37b8c8e8fed1db1165e2a6c94b70",
+  "representative_h5_schema_sha256": "d05c00e12714a23afee3c27c0726134654432d48d0b87a71915ebf16a630d759",
+  "frequency_metadata_audit_sha256": "125c0eadb50e73cde6c4bf6122baa787e0f0ec18f792250b707b58cf68012db2",
+  "state_file_schema_summary": {
+    "baseline": {
+      "files": 180,
+      "complete_full_schema_files": 180,
+      "known_missing_environment_metadata_files": 0,
+      "unique_full_dataset_shape_signatures": 1,
+      "core_acquisition_schema_equal": true
+    },
+    "irreversible": {
+      "files": 180,
+      "complete_full_schema_files": 148,
+      "known_missing_environment_metadata_files": 32,
+      "unique_full_dataset_shape_signatures": 2,
+      "core_acquisition_schema_equal": true
+    },
+    "reversible": {
+      "files": 180,
+      "complete_full_schema_files": 180,
+      "known_missing_environment_metadata_files": 0,
+      "unique_full_dataset_shape_signatures": 1,
+      "core_acquisition_schema_equal": true
+    }
+  },
+  "core_acquisition_schema": {
+    "raw_data_shape": [18, 600, 7552],
+    "channel_inputs_shape": [25, 1],
+    "channels_shape": [600, 2],
+    "frequency_repetition_index_shape": [2, 15],
+    "chirp_repetition_index_shape": [1, 3],
+    "sampling_frequency_field_shape": [1, 1],
+    "samples_field_shape": [1, 1],
+    "burst_frequency_field_shape": [5, 1]
+  },
+  "known_state_specific_differences": [
+    {
+      "state": "irreversible",
+      "files": 32,
+      "distribution": {
+        "T37_all_two_pressure_ramps": 30,
+        "T55_selected_random_ramp": 2
+      },
+      "missing_fields": [
+        "/MetaData/Pressure",
+        "/MetaData/Temp_Ambient",
+        "/MetaData/Temp_Medium",
+        "/MetaData/Temp_Surface"
+      ],
+      "core_waveform_channel_and_sampling_fields_present": true,
+      "explained": true,
+      "explanation": "The official source documentation recorded unavailable irreversible-damage logs for both T37 ramps and selected T55 random-ramp records.",
+      "routed_to_abstention": true
+    }
+  ],
+  "symmetric_controls": [
+    {
+      "control": "sensor_20_excluded_from_path_construction",
+      "applied_to_states": ["baseline", "irreversible", "reversible"],
+      "state_specific": false
+    }
+  ],
+  "unexplained_state_specific_differences": [],
+  "limitations": "Full-file official JSON inventories establish dataset-shape coverage for 540 H5 files. Numeric sampling and excitation metadata were audited in one representative H5 file per state before outcome analysis; equality beyond those representatives is not inferred from waveform values."
+}

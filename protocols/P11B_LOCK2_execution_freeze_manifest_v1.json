@@ -1,0 +1,48 @@
+{
+  "schema_version": "p11b-wind-blade-confirmatory-lock2-v1",
+  "frozen_local_time": "2026-08-11T18:25:00+08:00",
+  "status": "LOCK2_EXECUTION_CODE_FROZEN_BEFORE_NUMERIC_DATA_READ",
+  "numeric_waveforms_loaded_before_freeze": false,
+  "numeric_temperature_values_loaded_before_freeze": false,
+  "damage_scores_computed_before_freeze": false,
+  "synthetic_self_test": {
+    "status": "pass",
+    "known_lag_samples": 7,
+    "recovered_lag_samples": 7,
+    "aligned_score": 0.0
+  },
+  "files": [
+    {
+      "path": "research_protocols/P11B_wind_blade_confirmatory_preregistration_v1.md",
+      "bytes": 8638,
+      "sha256": "3db41a562fc6a61f584bb1f6e9fd09e90a8aacff5089f5a4654ac116bee0a3ca"
+    },
+    {
+      "path": "research_protocols/P11B_preregistration_amendment_A1_schema_mapping.md",
+      "bytes": 2671,
+      "sha256": "056e5433a236fe23501890bf2367264ff610b56ad2bd1b3eb9e4b198582a658b"
+    },
+    {
+      "path": "research_protocols/P11B_LOCK1_freeze_manifest_v1.json",
+      "bytes": 1534,
+      "sha256": "7bec40dec4d5b4ea8023b8c63c2df3fe680043e9a3aa476dfcc0ea63f2606d5b"
+    },
+    {
+      "path": "tools/run_p11b_wind_blade_confirmatory.py",
+      "bytes": 27213,
+      "sha256": "9a287c45ae2e7c650ed9fa288f3a569454e4cfb671f3d8b57c019496ffcfc0ac"
+    },
+    {
+      "path": "data/reports/p11b_schema_audit_lock1/archive_schema_summary.json",
+      "bytes": 2447,
+      "sha256": "2a51612c970dcbcc44740e5181cea21fe8ea8cc6af8622c026ea0345c64b90f1"
+    },
+    {
+      "path": "data/reports/p11b_schema_audit_lock1/mat_schema_summary.json",
+      "bytes": 9625,
+      "sha256": "973862acdeba0c6cad10711d95853ac8f6b7c28e39188afacdca9356143b9a8e"
+    }
+  ],
+  "allowed_next_action": "single_formal_execution_with_exact_frozen_script",
+  "failure_policy": "retain_all_negative_results_and_do_not_modify_thresholds_features_windows_or_endpoints"
+}

@@ -1,0 +1,1 @@
+4dac50c4cb7b1f80940e01d140ed3ec5b8a64ca3e9963721cb317afa9cc7ce0d  P12_COPV_LOCK1_freeze_manifest_v1.json

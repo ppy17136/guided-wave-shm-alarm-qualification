@@ -1,0 +1,22 @@
+schema_version: p7-confirmatory-rescore-v1
+job:
+  id: P7-RESCORE-01
+  title: Frozen component-score export for untouched D7-D13 confirmation
+data:
+  event_manifest: data/reports/p7_confirmatory_protocol_v1/p7_event_manifest.json
+source:
+  checkpoint_root: runs/p7_confirmatory_training_v1/01
+  seeds: [20260809, 20260810, 20260811, 20260812, 20260813]
+inference:
+  batch_size: 64
+  workers: 4
+  mask_repeats: 4
+runtime:
+  output_dir: runs/p7_confirmatory_rescore_v1/01
+  smoke_output_dir: runs/p7_confirmatory_rescore_v1_smoke/01
+  expected_results: 35
+integrity:
+  transformations_fit_on_train_only: true
+  post_event_labels_used_for_export: false
+  raw_component_scores_retained: true
+

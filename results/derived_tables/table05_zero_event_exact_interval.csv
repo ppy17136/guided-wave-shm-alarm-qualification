@@ -1,0 +1,2 @@
+endpoint,events,trials,empirical_estimate,clopper_pearson_95pct_two_sided_lower,clopper_pearson_95pct_two_sided_upper,clopper_pearson_95pct_one_sided_upper,interpretation
+Supported healthy alarm probability,0,39,0.0,0.0,0.0902511009603343,0.07393758892668655,Observed 0/39 is not proof that the prospective false-alarm probability is zero.

@@ -1,0 +1,76 @@
+{
+  "schema_version": "p12-copv-confirmatory-analysis-selftest-v1",
+  "status": "pass",
+  "checks": {
+    "synthetic_primary_pass": true,
+    "all_calibration_gates_pass": true,
+    "healthy_fpr_zero": true,
+    "damage_recall_one": true,
+    "all_support_covered": true,
+    "five_frequency_metrics": true,
+    "structural_auc_exceeds_energy": true,
+    "same_block_repeats_excluded": true
+  },
+  "primary_status": "PASS",
+  "alarm_metrics": {
+    "healthy_fpr": 0.0,
+    "healthy_false_alarm_blocks": 0,
+    "irreversible_recall": 1.0,
+    "recall_by_temperature": {
+      "25": 1.0,
+      "31": 1.0,
+      "37": 1.0,
+      "43": 1.0,
+      "49": 1.0,
+      "55": 1.0
+    },
+    "recall_by_pressure_bin": {
+      "50_250": 1.0,
+      "300_500": 1.0,
+      "550_700": 1.0
+    }
+  },
+  "discrimination": {
+    "by_frequency": {
+      "60000": {
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "energy_roc_auc": 0.5095663265306123,
+        "n_healthy": 42,
+        "n_damage": 168
+      },
+      "120000": {
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "energy_roc_auc": 0.5095663265306123,
+        "n_healthy": 42,
+        "n_damage": 168
+      },
+      "180000": {
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "energy_roc_auc": 0.5095663265306123,
+        "n_healthy": 42,
+        "n_damage": 168
+      },
+      "260000": {
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "energy_roc_auc": 0.5095663265306123,
+        "n_healthy": 42,
+        "n_damage": 168
+      },
+      "300000": {
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "energy_roc_auc": 0.5095663265306123,
+        "n_healthy": 42,
+        "n_damage": 168
+      }
+    },
+    "macro_roc_auc": 1.0,
+    "worst_frequency_roc_auc": 1.0,
+    "energy_macro_roc_auc": 0.5095663265306123,
+    "macro_advantage_over_energy": 0.4904336734693877
+  }
+}

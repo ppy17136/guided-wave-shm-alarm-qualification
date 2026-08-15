@@ -1,0 +1,29 @@
+{
+  "schema_version": "p11b-dynamic-secondary-lock-v1",
+  "frozen_local_time": "2026-08-11T18:45:00+08:00",
+  "status": "DYNAMIC_THREE_PHASE_CODE_FROZEN_BEFORE_DYNAMIC_NUMERIC_READ",
+  "primary_p11b_status": "FAIL_calibration_reliability_gate_unchanged",
+  "dynamic_numeric_waveforms_read_before_freeze": false,
+  "synthetic_self_test": {
+    "status": "pass",
+    "expected_dynamic_cycles": 1826
+  },
+  "files": [
+    {
+      "path": "research_protocols/P11B_secondary_dynamic_three_phase_analysis_A2.md",
+      "bytes": 2358,
+      "sha256": "1c3bae646a8c921fd4e6e730f0d5d39da7223e7cd81c6d9480e26ec4c407eb3d"
+    },
+    {
+      "path": "tools/run_p11b_secondary_dynamic_three_phase.py",
+      "bytes": 11418,
+      "sha256": "8391df863ec0660e09a7a2ff7ebed4360a22a19de6163f87b7aa148942d79cfc"
+    },
+    {
+      "path": "tools/run_p11b_wind_blade_confirmatory.py",
+      "bytes": 27213,
+      "sha256": "9a287c45ae2e7c650ed9fa288f3a569454e4cfb671f3d8b57c019496ffcfc0ac"
+    }
+  ],
+  "execution_rule": "run all three phases once and report all phases without selection"
+}

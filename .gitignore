@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+runs/
+data/raw/
+*.pt
+*.pth
+*.zip
+*.tar
+*.tar.gz

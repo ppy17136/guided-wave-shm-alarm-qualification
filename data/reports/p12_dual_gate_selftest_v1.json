@@ -1,0 +1,36 @@
+{
+  "schema_version": "p12-dual-gate-selftest-v1",
+  "status": "pass",
+  "checks": {
+    "stable_calibration_passes": true,
+    "zero_scale_spike_calibration_rejected": true,
+    "in_domain_targets_supported": true,
+    "shifted_numeric_target_rejected": true,
+    "unseen_category_rejected": true,
+    "two_of_three_alarm_applied": true,
+    "unsupported_sample_breaks_sequence": true,
+    "unreliable_calibration_abstains": true
+  },
+  "stable_calibration": {
+    "reliable": true,
+    "reason": "pass",
+    "threshold": 1.8951754086609942,
+    "median": 0.9954693790002991,
+    "robust_scale": 0.14995100494344918,
+    "samples": 240,
+    "blocks": 12,
+    "loo_threshold_min": 1.8605709282585368,
+    "loo_threshold_max": 1.943962781630861,
+    "loo_relative_range": 0.0440021820625265,
+    "max_loo_relative_range": 0.25,
+    "min_samples": 100,
+    "min_blocks": 10
+  },
+  "support_model": {
+    "reference_samples": 240,
+    "features": 2,
+    "k": 16,
+    "quantile": 0.99,
+    "distance_threshold": 0.20135928009901818
+  }
+}

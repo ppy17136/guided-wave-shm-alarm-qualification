@@ -1,0 +1,14 @@
+gate,observed,outcome,engineering_rationale,one_at_a_time_sensitivity
+Calibration reliable (5/5 frequencies),5/5 reliable,PASS,Prevents an unstable healthy tail from defining the alarm.,Pass; not threshold-sensitive.
+Healthy support coverage >= 0.90,0.9286,PASS,Requires broad evaluability of healthy operation.,Passes by 0.0286.
+Damage support coverage >= 0.80,0.7857,FAIL,Prevents abstention from hiding too much declared damage space.,Would pass at 0.75; a narrow coverage miss.
+Each-temperature support >= 0.60,minimum 0.0000,FAIL,Rejects an operating envelope with an unsupported temperature stratum.,Still fails at 0.50 because T37 has zero support.
+Supported healthy FPR <= 0.05,0/39 = 0.0000,PASS,Caps the empirical inspection burden within support.,Observed pass; 95% two-sided upper bound is 0.0903.
+Healthy false-alarm blocks <= 2,0,PASS,Limits clustered false alarms not visible in marginal FPR.,Pass; two-block margin.
+Supported damage recall >= 0.80,67/132 = 0.5076,FAIL,Requires useful sensitivity after support filtering.,Would pass only if relaxed to about 0.50.
+Worst-temperature recall >= 0.60,minimum 0.0000,FAIL,Prevents strong strata from masking a blind temperature regime.,Fails for any positive threshold because T43 recall is zero.
+Worst pressure-bin recall >= 0.60,minimum 0.3056,FAIL,Prevents strong pressure ranges from masking a weak range.,Would pass only near 0.30.
+Macro AUROC >= 0.80,0.9890,PASS,Requires useful overall ordering information.,Passes by 0.1890.
+Worst-frequency AUROC >= 0.65,0.9711,PASS,Requires every retained frequency to carry information.,Passes by 0.3211.
+AUROC advantage over energy >= 0.10,-0.0065,FAIL,Requires structural information beyond a simple energy change.,Still fails at zero advantage.
+No unexplained acquisition asymmetry,no unexplained asymmetry,PASS,Guards against protocol or instrument artefacts.,Pass; qualitative audit retained.

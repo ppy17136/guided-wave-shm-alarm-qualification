@@ -1,0 +1,51 @@
+schema_version: p1-shape-exploratory-v1
+job:
+  id: P1-SHAPE-02
+  phase: amplitude-decoupled-shape-ablation
+  priority: P0
+  confirmatory: false
+readiness:
+  status: ready_pilot_ssl_anomaly
+  runner: masked_reconstruction_shape_anomaly
+  reason: Exploratory source-only masked reconstruction with per-sample centered path RMS scaling.
+data:
+  train_store: data/zarr/measurements_2018_03.zarr
+  test_store: data/zarr/measurements_2021_04.zarr
+  chronological_train_fraction: 0.8
+method:
+  representation: raw-1D
+  ssl_pretrain: masked reconstruction
+  wave_normalization: instance_path_centered_rms
+  target_domain_visibility: none_before_locked_evaluation
+model:
+  embedding_dim: 192
+  transformer_layers: 4
+  attention_heads: 6
+  dropout: 0.1
+  mask_ratio: 0.35
+  mask_block_samples: 80
+training:
+  seeds: [20260809, 20260810, 20260811, 20260812, 20260813]
+  batch_size: 64
+  epochs: 80
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  workers: 8
+  mixed_precision: true
+  gradient_clip: 1.0
+  early_stopping_patience: 12
+evaluation:
+  threshold_quantile: 0.999
+  primary_metric: AUROC
+runtime:
+  output_dir: runs/p1_shape_v1/02
+  estimated_node_hours: 1.2
+  pbs_wave: 1
+  gpu: 1x NVIDIA RTX 4090
+  cpu_workers_cap: 16
+integrity:
+  forbid_test_data_in_training: true
+  forbid_test_data_in_threshold_selection: true
+  forbid_window_random_split: true
+  require_provenance: true
+

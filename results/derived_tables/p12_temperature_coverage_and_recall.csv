@@ -1,0 +1,7 @@
+temperature_c,healthy_total,healthy_supported,healthy_coverage,irreversible_total,irreversible_supported,irreversible_support_coverage,irreversible_alarms,observed_supported_recall,frozen_gate_recall_value,interpretation
+25,7,7,1.0,28,28,1.0,16,0.5714285714285714,0.5714285714285714,observed_supported_subset
+31,7,6,0.8571428571428571,28,26,0.9285714285714286,9,0.34615384615384615,0.34615384615384615,observed_supported_subset
+37,7,7,1.0,28,0,0.0,0,,0.0,not_estimable_no_supported_damage
+43,7,7,1.0,28,28,1.0,0,0.0,0.0,observed_supported_subset
+49,7,6,0.8571428571428571,28,26,0.9285714285714286,25,0.9615384615384616,0.9615384615384616,observed_supported_subset
+55,7,6,0.8571428571428571,28,24,0.8571428571428571,17,0.7083333333333334,0.7083333333333334,observed_supported_subset

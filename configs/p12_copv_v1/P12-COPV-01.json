@@ -1,0 +1,32 @@
+{
+  "schema_version": "p12-copv-config-v1",
+  "run_id": "P12-COPV-01",
+  "archives": {
+    "baseline": "_references/P12_COPV_SEALED/Baseline.zip",
+    "irreversible": "_references/P12_COPV_SEALED/Irreversible_Damage.zip",
+    "reversible": "_references/P12_COPV_SEALED/Reversible_Damage.zip"
+  },
+  "manifest": "data/reports/p12_copv_schema_audit_lock1/h5_file_manifest.csv",
+  "output_dir": "runs/p12_copv_v1/01",
+  "temporary_dir": "runs/p12_copv_v1/01/_temporary_h5",
+  "frequencies_hz": [60000, 120000, 180000, 260000, 300000],
+  "temperatures_c": [25, 31, 37, 43, 49, 55],
+  "main_pressures_bar": [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700],
+  "calibration_pressures_bar": [100, 200, 300, 400, 500, 600, 700],
+  "heldout_healthy_pressures_bar": [50, 150, 250, 350, 450, 550, 650],
+  "excluded_sensor": 20,
+  "top_path_fraction": 0.05,
+  "hampel_multiplier": 6.0,
+  "loo_relative_range_max": 0.25,
+  "support_quantile": 0.99,
+  "minimum_supported_frequencies": 4,
+  "minimum_alarm_frequencies": 3,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 20260812,
+  "official_excluded_baseline_files": [
+    "25-06-03_09-00-20_GW_Baseline_T31_150bar.h5",
+    "25-06-03_09-27-02_GW_Baseline_T31_100bar.h5",
+    "25-06-04_16-26-17_GW_Baseline_T49_550bar.h5",
+    "25-06-05_08-45-09_GW_Baseline_T55_550bar.h5"
+  ]
+}

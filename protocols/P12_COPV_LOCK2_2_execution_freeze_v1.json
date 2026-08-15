@@ -1,0 +1,878 @@
+{
+  "schema_version": "p12-copv-lock2-2-execution-freeze-v1",
+  "created_utc": "2026-08-13T00:05:30.976414+00:00",
+  "state": "LOCK2_2_FROZEN_AFTER_PREREGISTERED_INVALID_METADATA_IMPLEMENTATION",
+  "parent_lock2_1_sha256": "9e8e615b838001644fa7e70ef05ead9d994cb5defc62ee0fc0551c7e9fec456b",
+  "failed_job_before_lock2_2": {
+    "job": "20087.master",
+    "feature_cache_records_completed": 141,
+    "failure_point": "missing MetaData/Pressure before waveform read for failing target H5"
+  },
+  "a3_scope": "record missing/nonfinite Pressure or Temp_Surface as preregistered unsupported/invalid and continue",
+  "coverage_denominator_retains_invalid_conditions": true,
+  "existing_141_cache_records_reused_without_score_inspection_or_selection": true,
+  "scientific_parameters_or_gates_changed": false,
+  "input_archives": [
+    {
+      "name": "Baseline.zip",
+      "bytes": 20109358425,
+      "md5": "c57efcd712d82c9f735dce969176699e",
+      "sha256": "af210740a5e822e4d212e4462fd3b9eb6f07c318f1b56d7c99007f624581295a",
+      "verified": true
+    },
+    {
+      "name": "Irreversible_Damage.zip",
+      "bytes": 20276822123,
+      "md5": "5bb46c4e92d5e873f2936e706001c366",
+      "sha256": "7b3e4b371bf15e1ae70d59e076c084650c09a976397de8d5020da003ee17d4ed",
+      "verified": true
+    },
+    {
+      "name": "Reversible_Damage.zip",
+      "bytes": 20410262593,
+      "md5": "928e331d7b8fd4b3b2ca2189d57c5f79",
+      "sha256": "ef24744eafd38df4d8af25e91bc4437635f6a597d2ef473569cd9e18f6eda389",
+      "verified": true
+    }
+  ],
+  "frozen_files": [
+    {
+      "path": "configs/p12_copv_v1/P12-COPV-01.json",
+      "bytes": 1340,
+      "sha256": "f41650c048f5e213e8115663741f9e02a9f85fd93197a22fe2ac7febdd69e362"
+    },
+    {
+      "path": "src/p12_copv_pipeline.py",
+      "bytes": 10367,
+      "sha256": "0ce74b1a37c7e9d2cd79631845604ad40ed91b32031db6907d9d182ebfd7c38a"
+    },
+    {
+      "path": "tools/run_p12_copv_confirmatory.py",
+      "bytes": 35199,
+      "sha256": "96bb57c429a53b8e4a20ac4853015dcb2aee99b365630cb10ddc56e38236dd2d"
+    },
+    {
+      "path": "tools/selftest_p12_copv_pipeline.py",
+      "bytes": 4072,
+      "sha256": "91679b7b89ff1969c853732f4bb9bd84d1fa4347acb852bb8e2e41fec27eb899"
+    },
+    {
+      "path": "tools/selftest_p12_copv_confirmatory_analysis.py",
+      "bytes": 4730,
+      "sha256": "b18e39e47266a56dea528d59dd0e05311efd36d716db6e06d7025bf4aa9b7ffe"
+    },
+    {
+      "path": "tools/selftest_p12_copv_a2_frequency_mapping.py",
+      "bytes": 1624,
+      "sha256": "7c781e9297307452882b896954f9b8a22ef36dcb02fde4455bec5f06c7ae8d6f"
+    },
+    {
+      "path": "tools/audit_p12_copv_a2_frequency_metadata.py",
+      "bytes": 3669,
+      "sha256": "0b5da616ecc14010c99a695d5f0886e7dd9d7e82297d69c401b219416101d305"
+    },
+    {
+      "path": "tools/selftest_p12_copv_a3_missing_support.py",
+      "bytes": 2414,
+      "sha256": "93dd08a58f4418cbc563c9e27a25ac856d445cf1edae4c7789538dac7044e7bd"
+    },
+    {
+      "path": "tools/selftest_p12_copv_a3_coverage_denominator.py",
+      "bytes": 3838,
+      "sha256": "f6d256921f6f7da13f3d186870edc490c134300416df717fd5a435fc5e15cdb9"
+    },
+    {
+      "path": "tools/audit_p12_copv_a3_missing_support_from_official_json.py",
+      "bytes": 2086,
+      "sha256": "cf86148921779d3123703a9625524aa467e570217197acba914f1997ca3d78af"
+    },
+    {
+      "path": "research_protocols/P12_COPV_confirmatory_preregistration_v1.md",
+      "bytes": 11057,
+      "sha256": "a9240b3056d6de29658cf841137b33f9af77d626750aed5c5c687fa2fa3b66b4"
+    },
+    {
+      "path": "research_protocols/P12_COPV_preregistration_amendment_A1_schema_mapping.md",
+      "bytes": 5412,
+      "sha256": "69e5375a9cdb212f3a3e88393816f7e2b8fa0ccb7e9f13df8f168faa5ba9e940"
+    },
+    {
+      "path": "research_protocols/P12_COPV_preregistration_amendment_A2_frequency_index_mapping.md",
+      "bytes": 2100,
+      "sha256": "1313be5bc60a7b282322ae5f15e3ec21053650e76ed4f06ed0764084ae90c0f0"
+    },
+    {
+      "path": "research_protocols/P12_COPV_preregistration_amendment_A3_missing_support_metadata_execution.md",
+      "bytes": 1970,
+      "sha256": "5e5ed5b59e5bca89397b8e1a1d928c94314bdd70608bfc9e9e238052f1986f3a"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK1_freeze_manifest_v1.json",
+      "bytes": 3635,
+      "sha256": "4dac50c4cb7b1f80940e01d140ed3ec5b8a64ca3e9963721cb317afa9cc7ce0d"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK1_SHA256_v1.txt",
+      "bytes": 105,
+      "sha256": "ada2e67407babb557577f5cbd2d9f6c7488c519c1270fa7028330d82f2992917"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK2_execution_freeze_v1.json",
+      "bytes": 7515,
+      "sha256": "ad3f467cfd8e92188382b40f8f0907ef7e06012e53568368d9c9a16743e77047"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK2_SHA256_v1.txt",
+      "bytes": 107,
+      "sha256": "c9ddfb30a5f75ee401a78fb5221e3b17bf2f885917a11c0ba242912638ea3576"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK2_1_execution_freeze_v1.json",
+      "bytes": 14596,
+      "sha256": "9e8e615b838001644fa7e70ef05ead9d994cb5defc62ee0fc0551c7e9fec456b"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK2_1_SHA256_v1.txt",
+      "bytes": 109,
+      "sha256": "5cc84388fe96866f75ad4814e0fd88587dd4b82f19861f81a6bca2a47e56e789"
+    },
+    {
+      "path": "data/reports/p12_copv_download_verification_lock1.json",
+      "bytes": 2238,
+      "sha256": "7000faf1b2a8b82af186ed87d91bfc13b38cd92cb34d3eb8e5334dd16f406e5a"
+    },
+    {
+      "path": "data/reports/p12_copv_schema_audit_lock1/schema_audit_summary.json",
+      "bytes": 18986,
+      "sha256": "62269e0281491b7193b133507c17a9686df021f6cf1cac178f3ed0935c3c3424"
+    },
+    {
+      "path": "data/reports/p12_copv_schema_audit_lock1/h5_file_manifest.csv",
+      "bytes": 75407,
+      "sha256": "d3aa75fcb9ca71c25e7f5d6fea582fc96e28a10c68bdc32d582c483105ad9f5a"
+    },
+    {
+      "path": "data/reports/p12_copv_pipeline_selftest_v1.json",
+      "bytes": 755,
+      "sha256": "4d61126ee96b4e520f4d9a9e9bb0ce936c9c61ad7abd6c1aa2b45875c615b1b5"
+    },
+    {
+      "path": "data/reports/p12_copv_confirmatory_analysis_selftest_v1.json",
+      "bytes": 1979,
+      "sha256": "3d548c63ae2d58c46ddff018ecc4cb2f1b5537541aa9bdae55b17b31154501d9"
+    },
+    {
+      "path": "data/reports/p12_copv_a2_frequency_mapping_selftest_v1.json",
+      "bytes": 593,
+      "sha256": "94544ba550e5718d6a9080bdd4c26bcce9f04351fe6393282cf08d410d63d839"
+    },
+    {
+      "path": "data/reports/p12_copv_a2_frequency_metadata_audit_v1.json",
+      "bytes": 4117,
+      "sha256": "125c0eadb50e73cde6c4bf6122baa787e0f0ec18f792250b707b58cf68012db2"
+    },
+    {
+      "path": "data/reports/p12_copv_a3_missing_support_selftest_v1.json",
+      "bytes": 328,
+      "sha256": "eb4dc51388cc7c60965029c34c3e4744f3da8659b6e4ad1284975bb19bbd0acd"
+    },
+    {
+      "path": "data/reports/p12_copv_a3_coverage_denominator_selftest_v1.json",
+      "bytes": 705,
+      "sha256": "580e93b715e529a07c8c9cdc525146e4d1dc5dc1d8f14b530a2ecef851e4b50a"
+    },
+    {
+      "path": "data/reports/p12_copv_a3_missing_support_official_json_audit_v1.json",
+      "bytes": 8677,
+      "sha256": "e9ae27fbe116331d92376a24666bb1ddd8aa42357cb70105045a89e70b51587d"
+    }
+  ],
+  "tests": {
+    "p12_copv_pipeline_selftest_v1.json": {
+      "schema_version": "p12-copv-pipeline-selftest-v1",
+      "status": "pass",
+      "checks": {
+        "directed_channel_map_600": true,
+        "sensor20_mask_leaves_552": true,
+        "five_frequencies_three_repeats": true,
+        "lag_recovered_exactly": true,
+        "gain_invariance": true,
+        "damage_residual_increases": true,
+        "butterworth_bandpass_finite": true,
+        "two_of_three_confirmation": true,
+        "three_of_five_fusion": true,
+        "insufficient_frequency_support_abstains": true
+      },
+      "numeric": {
+        "maximum_clean_gain_matched_DI": 0.0006364674190990627,
+        "median_clean_energy_change": 0.2971203327178955,
+        "clean_top_score": 0.0006245932308956981,
+        "damaged_top_score": 1.3427438139915466,
+        "recovered_lag": 3
+      }
+    },
+    "p12_copv_confirmatory_analysis_selftest_v1.json": {
+      "schema_version": "p12-copv-confirmatory-analysis-selftest-v1",
+      "status": "pass",
+      "checks": {
+        "synthetic_primary_pass": true,
+        "all_calibration_gates_pass": true,
+        "healthy_fpr_zero": true,
+        "damage_recall_one": true,
+        "all_support_covered": true,
+        "five_frequency_metrics": true,
+        "structural_auc_exceeds_energy": true,
+        "same_block_repeats_excluded": true
+      },
+      "primary_status": "PASS",
+      "alarm_metrics": {
+        "healthy_fpr": 0.0,
+        "healthy_false_alarm_blocks": 0,
+        "irreversible_recall": 1.0,
+        "recall_by_temperature": {
+          "25": 1.0,
+          "31": 1.0,
+          "37": 1.0,
+          "43": 1.0,
+          "49": 1.0,
+          "55": 1.0
+        },
+        "recall_by_pressure_bin": {
+          "50_250": 1.0,
+          "300_500": 1.0,
+          "550_700": 1.0
+        }
+      },
+      "discrimination": {
+        "by_frequency": {
+          "60000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "120000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "180000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "260000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "300000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          }
+        },
+        "macro_roc_auc": 1.0,
+        "worst_frequency_roc_auc": 1.0,
+        "energy_macro_roc_auc": 0.5095663265306123,
+        "macro_advantage_over_energy": 0.4904336734693877
+      }
+    },
+    "p12_copv_a2_frequency_mapping_selftest_v1.json": {
+      "schema_version": "p12-copv-a2-frequency-mapping-selftest-v1",
+      "status": "pass",
+      "checks": {
+        "official_240_label_maps_to_260": true,
+        "canonical_260_still_supported": true,
+        "all_five_frequencies_three_repeats": true,
+        "malformed_indices_rejected": true
+      },
+      "mapped_indices": {
+        "60000": [
+          0,
+          1,
+          2
+        ],
+        "120000": [
+          3,
+          4,
+          5
+        ],
+        "180000": [
+          6,
+          7,
+          8
+        ],
+        "260000": [
+          9,
+          10,
+          11
+        ],
+        "300000": [
+          12,
+          13,
+          14
+        ]
+      }
+    },
+    "p12_copv_a2_frequency_metadata_audit_v1.json": {
+      "schema_version": "p12-copv-a2-frequency-metadata-audit-v1",
+      "status": "pass",
+      "checks": {
+        "three_archives_audited": true,
+        "all_index_rows_have_240_fourth_group": true,
+        "all_excitation_lists_have_260_fourth_frequency": true,
+        "all_burst_indices_are_1_to_15": true,
+        "all_chirp_indices_are_16_to_18": true,
+        "raw_numeric_values_never_read": true
+      },
+      "records": [
+        {
+          "role": "baseline",
+          "member": "T49_Baseline/25-06-04_16-06-50_GW_Baseline_T49_700bar.h5",
+          "index_frequency_vs_repetition": [
+            [
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              11.0,
+              12.0,
+              13.0,
+              14.0,
+              15.0
+            ],
+            [
+              60000.0,
+              60000.0,
+              60000.0,
+              120000.0,
+              120000.0,
+              120000.0,
+              180000.0,
+              180000.0,
+              180000.0,
+              240000.0,
+              240000.0,
+              240000.0,
+              300000.0,
+              300000.0,
+              300000.0
+            ]
+          ],
+          "signal_frequency_burst_hz": [
+            60000.0,
+            120000.0,
+            180000.0,
+            260000.0,
+            300000.0
+          ],
+          "index_chirp_vs_repetition": [
+            [
+              16.0,
+              17.0,
+              18.0
+            ]
+          ],
+          "sampling_frequency_hz": [
+            2976190.476190476
+          ],
+          "raw_dataset_shape_only": [
+            18,
+            600,
+            7552
+          ],
+          "raw_numeric_values_read": false
+        },
+        {
+          "role": "irreversible",
+          "member": "T55_Irreversible_Damage/25-06-17_14-35-04_GW_ID_T55_700bar.h5",
+          "index_frequency_vs_repetition": [
+            [
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              11.0,
+              12.0,
+              13.0,
+              14.0,
+              15.0
+            ],
+            [
+              60000.0,
+              60000.0,
+              60000.0,
+              120000.0,
+              120000.0,
+              120000.0,
+              180000.0,
+              180000.0,
+              180000.0,
+              240000.0,
+              240000.0,
+              240000.0,
+              300000.0,
+              300000.0,
+              300000.0
+            ]
+          ],
+          "signal_frequency_burst_hz": [
+            60000.0,
+            120000.0,
+            180000.0,
+            260000.0,
+            300000.0
+          ],
+          "index_chirp_vs_repetition": [
+            [
+              16.0,
+              17.0,
+              18.0
+            ]
+          ],
+          "sampling_frequency_hz": [
+            2976190.476190476
+          ],
+          "raw_dataset_shape_only": [
+            18,
+            600,
+            7552
+          ],
+          "raw_numeric_values_read": false
+        },
+        {
+          "role": "reversible",
+          "member": "T49_Reversible_Damage/25-06-11_13-56-06_GW_RD_T49_700bar.h5",
+          "index_frequency_vs_repetition": [
+            [
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              11.0,
+              12.0,
+              13.0,
+              14.0,
+              15.0
+            ],
+            [
+              60000.0,
+              60000.0,
+              60000.0,
+              120000.0,
+              120000.0,
+              120000.0,
+              180000.0,
+              180000.0,
+              180000.0,
+              240000.0,
+              240000.0,
+              240000.0,
+              300000.0,
+              300000.0,
+              300000.0
+            ]
+          ],
+          "signal_frequency_burst_hz": [
+            60000.0,
+            120000.0,
+            180000.0,
+            260000.0,
+            300000.0
+          ],
+          "index_chirp_vs_repetition": [
+            [
+              16.0,
+              17.0,
+              18.0
+            ]
+          ],
+          "sampling_frequency_hz": [
+            2976190.476190476
+          ],
+          "raw_dataset_shape_only": [
+            18,
+            600,
+            7552
+          ],
+          "raw_numeric_values_read": false
+        }
+      ]
+    },
+    "p12_copv_a3_missing_support_selftest_v1.json": {
+      "schema_version": "p12-copv-a3-missing-support-selftest-v1",
+      "status": "pass",
+      "checks": {
+        "missing_pressure_raises_narrow_exception": true,
+        "temporary_h5_deleted": true,
+        "invalid_condition_retained": true,
+        "invalid_condition_not_supported": true,
+        "invalid_condition_abstains": true
+      }
+    },
+    "p12_copv_a3_coverage_denominator_selftest_v1.json": {
+      "schema_version": "p12-copv-a3-coverage-denominator-selftest-v1",
+      "status": "pass",
+      "checks": {
+        "twenty_eight_main_t37_h5_invalid": true,
+        "invalids_remain_in_coverage_denominator": true,
+        "t37_temperature_coverage_zero": true,
+        "support_coverage_gate_fails": true,
+        "primary_status_fails": true,
+        "supported_damage_scores_still_analyzable": true
+      },
+      "expected_damage_coverage": 0.8333333333333334,
+      "reported_coverage": {
+        "healthy": 1.0,
+        "irreversible": 0.8333333333333334,
+        "by_temperature": {
+          "25": 1.0,
+          "31": 1.0,
+          "37": 0.0,
+          "43": 1.0,
+          "49": 1.0,
+          "55": 1.0
+        }
+      },
+      "primary_status": "FAIL"
+    },
+    "p12_copv_a3_missing_support_official_json_audit_v1.json": {
+      "schema_version": "p12-copv-a3-official-json-missing-support-audit-v1",
+      "status": "pass",
+      "checks": {
+        "missing_total_32": true,
+        "irreversible_t37_30": true,
+        "irreversible_t55_2": true,
+        "both_required_fields_missing": true,
+        "no_other_state_missing": true,
+        "waveform_values_read": false
+      },
+      "missing_files": [
+        {
+          "archive": "irreversible",
+          "json": "T55_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-17_17-32-20_GW_ID_T55_50bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T55_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-17_17-35-29_GW_ID_T55_200bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_07-49-39_GW_ID_T37_700bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_07-56-09_GW_ID_T37_650bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-02-42_GW_ID_T37_600bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-09-06_GW_ID_T37_550bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-15-24_GW_ID_T37_500bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-21-42_GW_ID_T37_450bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-28-36_GW_ID_T37_400bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-40-54_GW_ID_T37_350bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-47-24_GW_ID_T37_300bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_08-53-57_GW_ID_T37_250bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-00-21_GW_ID_T37_200bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-06-39_GW_ID_T37_150bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-12-57_GW_ID_T37_100bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-19-54_GW_ID_T37_50bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-27-21_GW_ID_T37_20bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-33-18_GW_ID_T37_100bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-38-51_GW_ID_T37_650bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-44-24_GW_ID_T37_700bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-49-45_GW_ID_T37_300bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_09-55-03_GW_ID_T37_150bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-00-24_GW_ID_T37_350bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-06-15_GW_ID_T37_500bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-12-06_GW_ID_T37_600bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-19-36_GW_ID_T37_250bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-25-06_GW_ID_T37_550bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-30-39_GW_ID_T37_20bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-36-09_GW_ID_T37_450bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-41-27_GW_ID_T37_400bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-46-51_GW_ID_T37_50bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        },
+        {
+          "archive": "irreversible",
+          "json": "T37_Irreversible_Damage/H5_FILES_INFO.json",
+          "file": "25-06-16_10-52-09_GW_ID_T37_200bar.h5",
+          "missing": [
+            "/MetaData/Pressure",
+            "/MetaData/Temp_Surface"
+          ]
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "h5py": "3.12.1",
+    "torch": "2.6.0+cu126",
+    "cuda": "12.6"
+  }
+}

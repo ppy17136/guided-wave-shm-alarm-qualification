@@ -1,0 +1,5 @@
+quantity,numerator,denominator,estimate,interpretation
+P12 held-out healthy FPR,0,39,0.0,no alarms among supported healthy conditions
+P12 irreversible support coverage,132,168,0.7857142857142857,"unsupported cases are abstentions, not correct classifications"
+P12 irreversible recall,67,132,0.5075757575757576,sensitivity conditional on valid support
+P12 gate pass fraction,7,13,0.5384615384615384,primary outcome remains FAIL if any mandatory gate fails

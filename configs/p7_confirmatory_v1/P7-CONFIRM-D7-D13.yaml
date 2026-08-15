@@ -1,0 +1,64 @@
+schema_version: p7-confirmatory-v1
+job:
+  id: P7-CONFIRM-D7-D13
+  title: Preregistered untouched confirmation on D7-D13
+data:
+  months: [2022_05, 2022_06, 2022_07, 2022_08, 2022_09, 2022_10]
+  transitions:
+    - {from: 6, to: 7, official_date: 2022-06-11}
+    - {from: 7, to: 8, official_date: 2022-07-31}
+    - {from: 8, to: 9, official_date: 2022-08-07}
+    - {from: 9, to: 10, official_date: 2022-09-11}
+    - {from: 10, to: 11, official_date: 2022-09-18}
+    - {from: 11, to: 12, official_date: 2022-09-25}
+    - {from: 12, to: 13, official_date: 2022-10-02}
+  train_days: [-15, -8]
+  calibration_days: [-8, -5]
+  pre_event_days: [-5, 0]
+  post_event_days: [0, 5]
+  min_new_state_hours: 24
+model_config_source: configs/p2_event_ssl_v1/P2-EVENT-SSL-01.yaml
+seeds: [20260809, 20260810, 20260811, 20260812, 20260813]
+primary_ranking:
+  score: path_iqr
+  transform: log1p_train_path_median_iqr_then_sample_path_iqr
+  seed_ensemble: arithmetic_mean
+  success:
+    macro_auc_min: 0.65
+    one_sided_bootstrap_lower95_min: 0.50
+    events_auc_above_half_min: 5
+  bootstrap:
+    repetitions: 5000
+    primary_block_hours: 24
+    sensitivity_block_hours: [6, 12, 48]
+primary_alarm:
+  score: fused_diag__two_sided
+  detector: leaky_cusum
+  fast_window: 128
+  slow_stride: 32
+  kappa: 4.0
+  threshold: 8.0
+  decay: 0.95
+  slow_update_guard_p: 0.20
+  consecutive_alarms: 3
+  success:
+    worst_pre_fpr_max: 0.10
+    total_pre_false_runs_k3_max: 14
+    events_detected_k3_min: 5
+locked_secondary:
+  - max_minus_median
+  - path_iqr_static_empirical_p_alpha_0.01
+  - path_iqr_rolling_window1024_guard0_alpha_0.01
+  - env_nn_q999
+  - block_crossconformal_alpha_0.01
+integrity:
+  future_amplitudes_unread_at_freeze: true
+  no_future_training: true
+  no_future_model_selection: true
+  no_future_threshold_selection: true
+  bugfix_requires_audit_trail: true
+runtime:
+  output_dir: runs/p7_confirmatory_v1/01
+  expected_events: 7
+  expected_seed_results: 35
+

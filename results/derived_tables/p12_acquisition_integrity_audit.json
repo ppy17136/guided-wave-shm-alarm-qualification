@@ -1,0 +1,124 @@
+{
+  "schema_version": "p12-acquisition-integrity-gate-evidence-v1",
+  "analysis_role": "post-outcome_machine_readable_binding_of_prespecified_qualitative_gate",
+  "frozen_gate_key": "no_unexplained_acquisition_asymmetry",
+  "manuscript_gate_label": "Data-integrity audit: no unexplained state-specific channel or sampling-regime difference",
+  "gate_pass": true,
+  "checks": {
+    "three_states_present": true,
+    "sampling_frequency_equal_across_states": true,
+    "burst_frequency_program_equal_across_states": true,
+    "raw_acquisition_shape_equal_across_states": true,
+    "official_schema_inventory_covers_540_files": true,
+    "core_channel_and_sampling_schema_equal_in_all_states": true,
+    "known_metadata_gaps_explained_and_abstained": true,
+    "zero_unexplained_state_specific_differences": true
+  },
+  "observed_sampling_frequency_hz_by_state": {
+    "baseline": [
+      2976190.476190476
+    ],
+    "irreversible": [
+      2976190.476190476
+    ],
+    "reversible": [
+      2976190.476190476
+    ]
+  },
+  "observed_burst_frequency_program_hz_by_state": {
+    "baseline": [
+      60000.0,
+      120000.0,
+      180000.0,
+      260000.0,
+      300000.0
+    ],
+    "irreversible": [
+      60000.0,
+      120000.0,
+      180000.0,
+      260000.0,
+      300000.0
+    ],
+    "reversible": [
+      60000.0,
+      120000.0,
+      180000.0,
+      260000.0,
+      300000.0
+    ]
+  },
+  "observed_raw_shape_by_state": {
+    "baseline": [
+      18,
+      600,
+      7552
+    ],
+    "irreversible": [
+      18,
+      600,
+      7552
+    ],
+    "reversible": [
+      18,
+      600,
+      7552
+    ]
+  },
+  "state_file_schema_summary": {
+    "baseline": {
+      "files": 180,
+      "complete_full_schema_files": 180,
+      "known_missing_environment_metadata_files": 0,
+      "unique_full_dataset_shape_signatures": 1,
+      "core_acquisition_schema_equal": true
+    },
+    "irreversible": {
+      "files": 180,
+      "complete_full_schema_files": 148,
+      "known_missing_environment_metadata_files": 32,
+      "unique_full_dataset_shape_signatures": 2,
+      "core_acquisition_schema_equal": true
+    },
+    "reversible": {
+      "files": 180,
+      "complete_full_schema_files": 180,
+      "known_missing_environment_metadata_files": 0,
+      "unique_full_dataset_shape_signatures": 1,
+      "core_acquisition_schema_equal": true
+    }
+  },
+  "known_state_specific_differences": [
+    {
+      "state": "irreversible",
+      "files": 32,
+      "distribution": {
+        "T37_all_two_pressure_ramps": 30,
+        "T55_selected_random_ramp": 2
+      },
+      "missing_fields": [
+        "/MetaData/Pressure",
+        "/MetaData/Temp_Ambient",
+        "/MetaData/Temp_Medium",
+        "/MetaData/Temp_Surface"
+      ],
+      "core_waveform_channel_and_sampling_fields_present": true,
+      "explained": true,
+      "explanation": "The official source documentation recorded unavailable irreversible-damage logs for both T37 ramps and selected T55 random-ramp records.",
+      "routed_to_abstention": true
+    }
+  ],
+  "unexplained_state_specific_differences": [],
+  "unexplained_difference_count": 0,
+  "source_evidence": [
+    {
+      "path": "data/reports/p12_copv_a2_frequency_metadata_audit_v1.json",
+      "sha256": "125c0eadb50e73cde6c4bf6122baa787e0f0ec18f792250b707b58cf68012db2"
+    },
+    {
+      "path": "data/reports/p12_copv_schema_audit_public_summary_v1.json",
+      "sha256": "f1fefe291903d29d7029bc856536e0e6dbf84cfa00c55908db38626787f3895d"
+    }
+  ],
+  "provenance_note": "The frozen execution serializer stored this pre-specified qualitative gate as a Boolean. This post-outcome file binds that Boolean to auditable pre-existing metadata records; it does not modify a score, threshold, denominator, gate criterion, or the strict P12 FAIL outcome."
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "p7-confirmatory-freeze-v1",
+  "frozen_local_time": "2026-08-10T23:12:46.2009553+08:00",
+  "timezone": "Asia/Shanghai",
+  "confirmation_scope": "D6->D7 through D12->D13",
+  "future_wave_amplitudes_read_before_freeze": false,
+  "future_score_or_label_stratified_figure_read_before_freeze": false,
+  "official_dataset": {
+    "figshare_article_id": 28112504,
+    "doi": "10.6084/m9.figshare.28112504.v1",
+    "files": [
+      {"name": "measurements 2022_05.pickle", "size": 1995293932, "md5": "a502cae22e650ed553aa5ee01eec40fd", "download_url": "https://ndownloader.figshare.com/files/51426419"},
+      {"name": "measurements 2022_06.pickle", "size": 1927418422, "md5": "7e815cf8dd38fe8377ed5a998a67ad07", "download_url": "https://ndownloader.figshare.com/files/51426443"},
+      {"name": "measurements 2022_07.pickle", "size": 1992604525, "md5": "403aa74a3f74818f62d16740b8e73ef9", "download_url": "https://ndownloader.figshare.com/files/51426446"},
+      {"name": "measurements 2022_08.pickle", "size": 1399398162, "md5": "51fb66c585d7ef3141792df41921a119", "download_url": "https://ndownloader.figshare.com/files/51426449"},
+      {"name": "measurements 2022_09.pickle", "size": 1925881618, "md5": "24a47066ec96f043b5c70d2f505d22ce", "download_url": "https://ndownloader.figshare.com/files/51426455"},
+      {"name": "measurements 2022_10.pickle", "size": 1005592104, "md5": "a02f3ad17413fcad66b3e40cef63008b", "download_url": "https://ndownloader.figshare.com/files/51426458"}
+    ],
+    "total_bytes": 10246188763
+  },
+  "locked_primary_ranking": {
+    "candidate": "path_iqr",
+    "selection_provenance": "post-label development discovery on D1-D6; prospectively frozen before D7-D13 amplitude access",
+    "primary_estimand": "equal-event macro mean AUROC",
+    "success": "macro_AUROC>=0.65 AND one-sided hierarchical 24h-block-bootstrap lower95>0.50 AND at least 5/7 event AUROCs>0.50"
+  },
+  "locked_primary_alarm": {
+    "candidate": "fused_diag__two_sided",
+    "detector": "leaky_cusum",
+    "parameters": {"fast_window": 128, "slow_stride": 32, "kappa": 4.0, "threshold": 8.0, "decay": 0.95, "slow_update_guard_p": 0.20, "consecutive_alarms": 3},
+    "success": "worst_pre_FPR<=0.10 AND total_pre_K3_false_runs<=14 AND at least 5/7 events detected within 5 days"
+  },
+  "sha256": {
+    "research_protocols/P7_D7_D13_confirmatory_preregistration_v1.md": "2d63a83f8534c2ae98687a4f40902981d18b4ccedd1b9e6b2403d6e5ab252b63",
+    "configs/p7_confirmatory_v1/P7-CONFIRM-D7-D13.yaml": "8b33a7db35f445c8594ddf987f6a56d21abee3c9beae2cfc932bc126b5a6c3d9",
+    "configs/p2_event_ssl_v1/P2-EVENT-SSL-01.yaml": "56071bb70247c3798483adcf9fb0b73892fd3816bec2c6c948cc0440e1b66501",
+    "src/run_p2_event_ssl.py": "b6fdaeeed95a779b43402cefb731c4ffaf70d0eba8aa38e621dfaacc428ef1f9",
+    "src/export_p3_checkpoint_scores.py": "c1b90ccab15c86c6ad8ff10f72f70257236a45be26d09ca463ea9f213abe1f32",
+    "tools/analyze_p3_locked_rescore.py": "d9c4771ce499669ad54aa70f508a714e0b0e3562be71e8509deb31e6d35b1793",
+    "tools/analyze_p4_guarded_online_calibration.py": "41bbfc9201cf30264a5a594fa335dd432bbcc78d18e7009046a02e0ef01a6aa0",
+    "tools/analyze_p5b_leaky_cusum.py": "e513d0d4a6be22fb8bbcffaf6b3697770d8f88502a77231c04d94c3ad10f2992",
+    "tools/analyze_p6_cross_path_contrast.py": "9a2b80c85afa9b37174598848a9dc05e51fe300d787e487149a54880fd4f1002",
+    "tools/build_damage_event_manifest.py": "2989b968c5ead6fb719efa5f572b8c5ea869ea4e59527cb48322941713d1f772",
+    "tools/download_figshare.py": "000531b70150c630be63033769d64ae95392227fed95797ad0e4e1f3bea5f7c6",
+    "tools/prepare_verified_event_months.py": "080b9c971b1901d2a171d4cc1d067b095b7bc07fd4ae73ba6b364406c6825253"
+  },
+  "change_policy": "Any post-freeze code change requires a dated patch record. Changes informed by D7-D13 outcomes are exploratory and cannot alter confirmatory endpoints."
+}

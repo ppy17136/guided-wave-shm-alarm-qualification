@@ -1,0 +1,10 @@
+stage,role,labels_used_for_design,may_change_confirmatory_claim,status
+P7,confirmatory,no,yes,frozen FAIL
+P8,post-P7 exploratory,yes,no,exploratory negative
+P9B,development,yes,no,development only
+P9E,external healthy-only,no damage labels,healthy transfer only,frozen FAIL
+P10,predeclared evaluation,no for threshold,yes,frozen FAIL
+P11A,post-P10 exploratory,damage outcomes known,no,mechanism audit
+P11B static,confirmatory,no,yes,frozen FAIL
+P11B dynamic,predeclared secondary after primary,primary known,no,secondary negative
+P12,external preregistered confirmatory,no; archives sealed,yes,frozen FAIL

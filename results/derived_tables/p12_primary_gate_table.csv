@@ -1,0 +1,14 @@
+gate,display_label,passed,status
+five_frequency_calibration_reliable,Calibration reliable (5/5 frequencies),True,PASS
+healthy_support_coverage_ge_0_90,Healthy support coverage >= 0.90,True,PASS
+damage_support_coverage_ge_0_80,Damage support coverage >= 0.80,False,FAIL
+each_temperature_support_coverage_ge_0_60,Each-temperature support >= 0.60,False,FAIL
+supported_healthy_fpr_le_0_05,Supported healthy FPR <= 0.05,True,PASS
+healthy_false_alarm_blocks_le_2,Healthy false-alarm blocks <= 2,True,PASS
+supported_damage_recall_ge_0_80,Supported damage recall >= 0.80,False,FAIL
+worst_temperature_recall_ge_0_60,Worst-temperature recall >= 0.60,False,FAIL
+worst_pressure_bin_recall_ge_0_60,Worst pressure-bin recall >= 0.60,False,FAIL
+macro_auc_ge_0_80,Macro AUROC >= 0.80,True,PASS
+worst_frequency_auc_ge_0_65,Worst-frequency AUROC >= 0.65,True,PASS
+macro_auc_advantage_over_energy_ge_0_10,AUROC advantage over energy >= 0.10,False,FAIL
+no_unexplained_acquisition_asymmetry,No unexplained acquisition asymmetry,True,PASS

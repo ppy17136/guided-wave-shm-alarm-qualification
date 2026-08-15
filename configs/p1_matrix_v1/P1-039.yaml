@@ -1,0 +1,92 @@
+schema_version: p1-execution-v1
+job:
+  id: P1-039
+  phase: S4-测试时适配
+  priority: P1
+  confirmatory: false
+  claim_role: 探索无标签现场适配
+  reference_job_id: null
+  planning_decision_rule: 只在预注册主模型成功后进入；不得用测试标签选超参
+readiness:
+  status: blocked_upstream_selection
+  runner: none
+  reason: 配置依赖上一阶段选出的best-of模型，需先完成上游主验证。
+data:
+  root: data/zarr
+  train_month: '2018_03'
+  test_month: '2021_04'
+  train_store: data/zarr/measurements_2018_03.zarr
+  test_store: data/zarr/measurements_2021_04.zarr
+  paths: 8
+  samples_per_wave: 2000
+  train_allowed_damage_tags:
+  - 0
+  quarantine_2018_nonzero_damage: true
+  reject_humidity_out_of_bounds_for_training: true
+  chronological_train_fraction: 0.8
+  normalization_fit: train_partition_only
+  target_domain_visibility: none_before_locked_evaluation
+  known_quality_issue: The embedded data inf descriptions for weather tag and damage
+    tag are swapped in both pilot files; the arrays themselves follow the paper for
+    2021-04, but 2018-03 contains 211 unexplained nonzero damage tags before any documented
+    damage. These records are quarantined, not relabelled.
+method:
+  representation: raw-1D
+  backbone: 1D-ResNet/Transformer-small
+  ssl_pretrain: masked reconstruction
+  domain_method: best-of-S3
+  test_time_adaptation: BN-adapt
+  uncertainty_method: temperature scaling
+  label_fraction_pct: 10.0
+  pilot_interpretation: null
+model:
+  embedding_dim: 192
+  transformer_layers: 4
+  attention_heads: 6
+  dropout: 0.1
+  mask_ratio: 0.35
+  mask_block_samples: 80
+training:
+  seeds:
+  - 20260809
+  - 20260810
+  - 20260811
+  - 20260812
+  - 20260813
+  batch_size: 64
+  epochs: 80
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  workers: 8
+  mixed_precision: true
+  gradient_clip: 1.0
+  early_stopping_patience: 12
+evaluation:
+  primary_metric: AUROC
+  secondary_metrics:
+  - AP
+  - Recall@FPR=1%
+  - ECE
+  - Brier
+  - NLL
+  - risk-coverage
+  - event-level recall
+  calibration_source: held-out tail of training month only
+  threshold_quantile: 0.999
+  bootstrap_samples: 2000
+  confidence_level: 0.95
+  event_level_min_consecutive_alarms: 3
+runtime:
+  output_dir: runs/p1_matrix_v1/039
+  estimated_node_hours: 3.0
+  pbs_wave: 3
+  pbs_node_slot: 11
+  gpu: 1x NVIDIA RTX 4090
+  cpu_workers_cap: 16
+integrity:
+  forbid_test_data_in_training: true
+  forbid_test_data_in_threshold_selection: true
+  forbid_window_random_split: true
+  require_provenance: true
+  require_failure_record: true
+  notes: 区分online/transductive设定，单独报告

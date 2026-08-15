@@ -1,0 +1,220 @@
+{
+  "schema_version": "p12-copv-lock2-execution-freeze-v1",
+  "created_utc": "2026-08-11T23:30:14.800584+00:00",
+  "state": "LOCK2_FROZEN_BEFORE_ANY_RAW_WAVEFORM_VALUE_READ",
+  "raw_numeric_values_read_before_freeze": false,
+  "permission_after_freeze": "one-time smoke followed by unchanged formal execution",
+  "scientific_rules": {
+    "lock1_unchanged": true,
+    "a1_schema_only_amendment_applied": true,
+    "result_based_method_or_threshold_changes_prohibited": true,
+    "new_methods_after_unseal_are_p13_exploratory_only": true
+  },
+  "input_archives": [
+    {
+      "name": "Baseline.zip",
+      "bytes": 20109358425,
+      "md5": "c57efcd712d82c9f735dce969176699e",
+      "sha256": "af210740a5e822e4d212e4462fd3b9eb6f07c318f1b56d7c99007f624581295a",
+      "verified": true
+    },
+    {
+      "name": "Irreversible_Damage.zip",
+      "bytes": 20276822123,
+      "md5": "5bb46c4e92d5e873f2936e706001c366",
+      "sha256": "7b3e4b371bf15e1ae70d59e076c084650c09a976397de8d5020da003ee17d4ed",
+      "verified": true
+    },
+    {
+      "name": "Reversible_Damage.zip",
+      "bytes": 20410262593,
+      "md5": "928e331d7b8fd4b3b2ca2189d57c5f79",
+      "sha256": "ef24744eafd38df4d8af25e91bc4437635f6a597d2ef473569cd9e18f6eda389",
+      "verified": true
+    }
+  ],
+  "frozen_files": [
+    {
+      "path": "configs/p12_copv_v1/P12-COPV-01.json",
+      "bytes": 1340,
+      "sha256": "f41650c048f5e213e8115663741f9e02a9f85fd93197a22fe2ac7febdd69e362"
+    },
+    {
+      "path": "src/p12_copv_pipeline.py",
+      "bytes": 9757,
+      "sha256": "f3676361519f632dccbf38fb25177c1c6ea2036f1c3871f37c5f411140458e74"
+    },
+    {
+      "path": "tools/run_p12_copv_confirmatory.py",
+      "bytes": 32650,
+      "sha256": "ad4720be1511309911cad7180e6b13d9c3db2895b6fc8c44e6e0f52b5c2158f5"
+    },
+    {
+      "path": "tools/selftest_p12_copv_pipeline.py",
+      "bytes": 4072,
+      "sha256": "91679b7b89ff1969c853732f4bb9bd84d1fa4347acb852bb8e2e41fec27eb899"
+    },
+    {
+      "path": "tools/selftest_p12_copv_confirmatory_analysis.py",
+      "bytes": 4730,
+      "sha256": "b18e39e47266a56dea528d59dd0e05311efd36d716db6e06d7025bf4aa9b7ffe"
+    },
+    {
+      "path": "research_protocols/P12_COPV_confirmatory_preregistration_v1.md",
+      "bytes": 11057,
+      "sha256": "a9240b3056d6de29658cf841137b33f9af77d626750aed5c5c687fa2fa3b66b4"
+    },
+    {
+      "path": "research_protocols/P12_COPV_preregistration_amendment_A1_schema_mapping.md",
+      "bytes": 5412,
+      "sha256": "69e5375a9cdb212f3a3e88393816f7e2b8fa0ccb7e9f13df8f168faa5ba9e940"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK1_freeze_manifest_v1.json",
+      "bytes": 3635,
+      "sha256": "4dac50c4cb7b1f80940e01d140ed3ec5b8a64ca3e9963721cb317afa9cc7ce0d"
+    },
+    {
+      "path": "research_protocols/P12_COPV_LOCK1_SHA256_v1.txt",
+      "bytes": 105,
+      "sha256": "ada2e67407babb557577f5cbd2d9f6c7488c519c1270fa7028330d82f2992917"
+    },
+    {
+      "path": "data/reports/p12_copv_download_verification_lock1.json",
+      "bytes": 2238,
+      "sha256": "7000faf1b2a8b82af186ed87d91bfc13b38cd92cb34d3eb8e5334dd16f406e5a"
+    },
+    {
+      "path": "data/reports/p12_copv_schema_audit_lock1/schema_audit_summary.json",
+      "bytes": 18986,
+      "sha256": "62269e0281491b7193b133507c17a9686df021f6cf1cac178f3ed0935c3c3424"
+    },
+    {
+      "path": "data/reports/p12_copv_schema_audit_lock1/h5_file_manifest.csv",
+      "bytes": 75407,
+      "sha256": "d3aa75fcb9ca71c25e7f5d6fea582fc96e28a10c68bdc32d582c483105ad9f5a"
+    },
+    {
+      "path": "data/reports/p12_copv_pipeline_selftest_v1.json",
+      "bytes": 755,
+      "sha256": "4d61126ee96b4e520f4d9a9e9bb0ce936c9c61ad7abd6c1aa2b45875c615b1b5"
+    },
+    {
+      "path": "data/reports/p12_copv_confirmatory_analysis_selftest_v1.json",
+      "bytes": 1979,
+      "sha256": "3d548c63ae2d58c46ddff018ecc4cb2f1b5537541aa9bdae55b17b31154501d9"
+    }
+  ],
+  "selftests": {
+    "signal_processing": {
+      "schema_version": "p12-copv-pipeline-selftest-v1",
+      "status": "pass",
+      "checks": {
+        "directed_channel_map_600": true,
+        "sensor20_mask_leaves_552": true,
+        "five_frequencies_three_repeats": true,
+        "lag_recovered_exactly": true,
+        "gain_invariance": true,
+        "damage_residual_increases": true,
+        "butterworth_bandpass_finite": true,
+        "two_of_three_confirmation": true,
+        "three_of_five_fusion": true,
+        "insufficient_frequency_support_abstains": true
+      },
+      "numeric": {
+        "maximum_clean_gain_matched_DI": 0.0006364674190990627,
+        "median_clean_energy_change": 0.2971203327178955,
+        "clean_top_score": 0.0006245932308956981,
+        "damaged_top_score": 1.3427438139915466,
+        "recovered_lag": 3
+      }
+    },
+    "confirmatory_analysis": {
+      "schema_version": "p12-copv-confirmatory-analysis-selftest-v1",
+      "status": "pass",
+      "checks": {
+        "synthetic_primary_pass": true,
+        "all_calibration_gates_pass": true,
+        "healthy_fpr_zero": true,
+        "damage_recall_one": true,
+        "all_support_covered": true,
+        "five_frequency_metrics": true,
+        "structural_auc_exceeds_energy": true,
+        "same_block_repeats_excluded": true
+      },
+      "primary_status": "PASS",
+      "alarm_metrics": {
+        "healthy_fpr": 0.0,
+        "healthy_false_alarm_blocks": 0,
+        "irreversible_recall": 1.0,
+        "recall_by_temperature": {
+          "25": 1.0,
+          "31": 1.0,
+          "37": 1.0,
+          "43": 1.0,
+          "49": 1.0,
+          "55": 1.0
+        },
+        "recall_by_pressure_bin": {
+          "50_250": 1.0,
+          "300_500": 1.0,
+          "550_700": 1.0
+        }
+      },
+      "discrimination": {
+        "by_frequency": {
+          "60000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "120000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "180000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "260000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          },
+          "300000": {
+            "roc_auc": 1.0,
+            "average_precision": 1.0,
+            "energy_roc_auc": 0.5095663265306123,
+            "n_healthy": 42,
+            "n_damage": 168
+          }
+        },
+        "macro_roc_auc": 1.0,
+        "worst_frequency_roc_auc": 1.0,
+        "energy_macro_roc_auc": 0.5095663265306123,
+        "macro_advantage_over_energy": 0.4904336734693877
+      }
+    }
+  },
+  "environment_used_for_freeze": {
+    "python": "3.11.5",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "h5py": "3.12.1",
+    "torch": "2.6.0+cu126",
+    "torch_cuda_runtime": "12.6",
+    "cuda_visible": true,
+    "gpu": "NVIDIA GeForce RTX 4060 Ti"
+  }
+}

@@ -1,0 +1,45 @@
+{
+    "schema_version":  "p7-execution-code-freeze-v1.1",
+    "frozen_local_time":  "2026-08-11T00:15:51.4204775+08:00",
+    "predecessor_execution_freeze_sha256":  "c9b839a040260cecc3452cdac623db30d598d670e48fa3c9f9d6218b4e75e53c",
+    "protocol_freeze_v1_1_sha256":  "570036f8201371edff7cba9f2b9e350f72726a1d8b9901f00d19908b9dbab4fa",
+    "amendment":  {
+                      "id":  "A2",
+                      "reason":  "D9-\u003eD10 official data begins 27.076111 h after planned training-baseline start; calibration and both test windows are complete.",
+                      "information_used":  [
+                                               "official file MD5",
+                                               "timestamps",
+                                               "sample counts",
+                                               "damage-tag transitions",
+                                               "window completeness"
+                                           ],
+                      "model_scores_seen":  false,
+                      "future_performance_results_seen":  false
+                  },
+    "future_data_access_state":  {
+                                     "all_six_official_pickles_md5_verified":  true,
+                                     "future_zarr_created":  true,
+                                     "timestamp_and_label_metadata_audited":  true,
+                                     "any_future_model_trained":  false,
+                                     "any_future_model_score_computed":  false,
+                                     "any_future_label_stratified_performance_seen":  false
+                                 },
+    "sha256":  {
+                   "research_protocols/P7_D7_D13_preregistration_amendment_A2.md":  "fe2bc090c342ae05ce158c4a9ccc07596a245935ef269169bde1c18ded47ce74",
+                   "configs/p7_confirmatory_v1/P7-CONFIRM-D7-D13-v1.1.yaml":  "1e64231c8979132604daa7d1a145c021233066b154b0d76ac9df27389569a2aa",
+                   "configs/p7_confirmatory_v1/P7-TRAIN-01.yaml":  "ca8a7eb63bc96fb865683165b6f28b0c31a6c1dcba89454325e7d99013404277",
+                   "configs/p7_confirmatory_v1/P7-RESCORE-01.yaml":  "c560be23ad94288368fdc9d39bd1b56880394459e9a4207b0e5d7146819e9602",
+                   "src/run_p7_confirmatory_train.py":  "375eee95450edbbcf117abc8da4f55aecd7b178fe2f20de55486df69b046f6c5",
+                   "src/export_p7_confirmatory_scores.py":  "7c96b39a5d9082c17b61d58c7428a1324f84961581abe6197468649aa2fd6d56",
+                   "tools/build_p7_confirmation_manifest.py":  "44e9e4710970e02654407044891e4954e8ffe1cda098b22ec6c581c3b5dbf342",
+                   "tools/preflight_p7_confirmatory.py":  "cfceda8538824f85a8f3a5cb9cc361651ea1800730a09452e38e047fa6074456",
+                   "tools/analyze_p7_confirmatory.py":  "698087e255776aa2025b51dd357ade4717e0ecfcf85f31071d0ceb181d89c318",
+                   "tools/run_p7_classical_baselines.py":  "0d1dd065968893d2ecfd634d7c0c67513a55fe83c4300490e2040849a0c11627",
+                   "tools/run_p7_block_crossconformal.py":  "f792208dfe89dce2b9f2d9dc58ba2d155959f62b3f1b6230f51344db418d247d",
+                   "tools/merge_p7_confirmatory_comparators.py":  "bb4070835453fceefac9b160161e73726ee6d1a1e989e2a89ee423d3bccd4851",
+                   "tools/run_event_classical_baselines.py":  "847e65d00c00ca2dafcf60b663043888261526560ffe8b47e80e4d2dd3ffcd81",
+                   "tools/run_event_block_crossconformal.py":  "757d66e714387a2863f27a73b1c6e420122830dda94c6d6b5317a771117d4255",
+                   "pbs/32_p7_confirmatory_train_rescore_serial.pbs":  "9102403fe020e5309941f6a9568f17f2bb750a796f235fee59fb43d6474477d6"
+               },
+    "post_freeze_policy":  "Only audited execution-blocking bug fixes are permitted. Any change informed by D7-D13 scores is exploratory and invalidates confirmatory relabeling."
+}

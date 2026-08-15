@@ -1,0 +1,39 @@
+{
+  "schema_version": "p7-confirmatory-freeze-v1.1",
+  "amended_local_time": "2026-08-10T23:28:48.2928786+08:00",
+  "timezone": "Asia/Shanghai",
+  "supersedes_execution_parameter_only": "slow_update_guard_p in v1",
+  "base_freeze_manifest_sha256": "4425939b94057d76cd2364be5048f265425e465fd625228343b1c328d1afd6df",
+  "base_protocol_sha256": "2d63a83f8534c2ae98687a4f40902981d18b4ccedd1b9e6b2403d6e5ab252b63",
+  "amendment_A1_sha256": "c31f02d1d0d166ca6492ff2b3de0f12f92354a54fc92be22e570bc00b9372d9c",
+  "execution_config_v1_1_sha256": "1e64231c8979132604daa7d1a145c021233066b154b0d76ac9df27389569a2aa",
+  "p5b_source_sha256": "e513d0d4a6be22fb8bbcffaf6b3697770d8f88502a77231c04d94c3ad10f2992",
+  "corrected_parameter": {
+    "name": "primary_alarm.slow_update_guard_p",
+    "v1_typographical_value": 0.20,
+    "v1_1_executable_value": 0.05,
+    "basis": "GUARD_P=.05 in the already completed D1-D6 implementation"
+  },
+  "future_data_state_at_amendment": {
+    "measurements_2022_05_pickle": "downloaded and MD5 verified; not parsed or inspected",
+    "measurements_2022_06_pickle": "partial transport bytes only; not parsed or inspected",
+    "measurements_2022_07_to_10": "absent",
+    "any_future_pickle_loaded": false,
+    "any_future_zarr_created": false,
+    "any_future_wave_statistic_computed": false,
+    "any_future_model_score_computed": false,
+    "any_future_label_stratified_plot_created": false
+  },
+  "unchanged": [
+    "path_iqr primary ranking score",
+    "all training hyperparameters and five seeds",
+    "all data windows and seven transitions",
+    "ranking and alarm success criteria",
+    "P5b fast_window=128, slow_stride=32, kappa=4, h=8, decay=.95, K=3",
+    "multiplicity and bootstrap rules"
+  ],
+  "authoritative_execution_pair": [
+    "research_protocols/P7_D7_D13_confirmatory_preregistration_v1.md plus research_protocols/P7_D7_D13_preregistration_amendment_A1.md",
+    "configs/p7_confirmatory_v1/P7-CONFIRM-D7-D13-v1.1.yaml"
+  ]
+}

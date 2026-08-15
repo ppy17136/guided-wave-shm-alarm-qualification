@@ -1,0 +1,10 @@
+archive,status,fusion,count
+baseline,complete,no_alarm,80
+baseline,invalid_missing_frozen_reference,abstain_support,3
+irreversible,complete,alarm,67
+irreversible,complete,no_alarm,65
+irreversible,invalid_missing_frozen_reference,abstain_support,6
+irreversible,invalid_missing_support_metadata,abstain_support,30
+reversible,complete,alarm,46
+reversible,complete,no_alarm,116
+reversible,invalid_missing_frozen_reference,abstain_support,6
