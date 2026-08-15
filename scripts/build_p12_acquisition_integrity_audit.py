@@ -16,11 +16,14 @@ DEFAULT_OUTPUT = ROOT / "results" / "derived_tables" / "p12_acquisition_integrit
 
 
 def digest(path: Path) -> str:
-    value = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            value.update(chunk)
-    return value.hexdigest()
+    """Hash canonical JSON content so provenance is newline-platform invariant."""
+    payload = json.dumps(
+        json.loads(path.read_text(encoding="utf-8-sig")),
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
 
 
 def load(path: Path) -> dict:
