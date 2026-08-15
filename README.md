@@ -1,10 +1,12 @@
 # Guided-wave SHM alarm qualification
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21944979.svg)](https://doi.org/10.5281/zenodo.21944979)
+
 Reproducibility package for **High AUROC Does Not Guarantee Reliable Alarms: Calibration- and Support-Aware Validation of Guided-Wave SHM under Operational Shift**.
 
 ## Status
 
-This repository provides the versioned analysis and reporting materials for release `v1.0.0`. The repository materials are distributed under the BSD-3-Clause license.
+This repository provides the versioned analysis and reporting materials for release `v1.0.1`. The repository materials are distributed under the BSD-3-Clause license.
 
 ## Included
 
@@ -29,4 +31,3 @@ The repository includes a CPU-only GitHub Actions workflow, a static repository 
 ## Release controls
 
 Licensing, third-party attribution, technical validation, and citation metadata are documented in `LICENSE`, `THIRD_PARTY_NOTICES.md`, `PUBLIC_RELEASE_VALIDATION_REPORT.md`, and `CITATION.cff`.
-
