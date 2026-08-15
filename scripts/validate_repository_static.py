@@ -32,7 +32,7 @@ def sha256(path: Path) -> str:
 
 
 def main() -> None:
-    files = sorted(path for path in ROOT.rglob("*") if path.is_file())
+    files = sorted(path for path in ROOT.rglob("*") if path.is_file() and ".git" not in path.relative_to(ROOT).parts)
     errors: list[dict[str, str]] = []
     counts = {"python": 0, "json": 0, "yaml": 0, "csv": 0, "pdf": 0, "png": 0}
     for path in files:
