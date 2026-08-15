@@ -113,11 +113,11 @@
   "source_evidence": [
     {
       "path": "data/reports/p12_copv_a2_frequency_metadata_audit_v1.json",
-      "sha256": "125c0eadb50e73cde6c4bf6122baa787e0f0ec18f792250b707b58cf68012db2"
+      "sha256": "10b2de7cff2aa94429e25d44284fd0ec7594f5cca1a9ab5c10492ccde149985a"
     },
     {
       "path": "data/reports/p12_copv_schema_audit_public_summary_v1.json",
-      "sha256": "f1fefe291903d29d7029bc856536e0e6dbf84cfa00c55908db38626787f3895d"
+      "sha256": "3cdd1db38a5e58c7bfb1d9c024e95b70b75048c2c371d4d3cc6fe631749a0062"
     }
   ],
   "provenance_note": "The frozen execution serializer stored this pre-specified qualitative gate as a Boolean. This post-outcome file binds that Boolean to auditable pre-existing metadata records; it does not modify a score, threshold, denominator, gate criterion, or the strict P12 FAIL outcome."
