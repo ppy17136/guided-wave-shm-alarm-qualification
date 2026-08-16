@@ -4,7 +4,7 @@
   "upload_type": "software",
   "access_right": "open",
   "license": "BSD-3-Clause",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publication_date": "2026-08-16",
   "keywords": [
     "structural health monitoring",
@@ -16,18 +16,51 @@
     "reproducibility"
   ],
   "creators": [
-    {"name": "Shang, Jia Bao", "affiliation": "Liaoning Petrochemical University", "orcid": "0009-0005-5621-0634"},
-    {"name": "Lü, Bai Lin", "affiliation": "Liaoning Petrochemical University", "orcid": "0000-0002-8922-8399"},
-    {"name": "Li, Tian Xiang", "affiliation": "Liaoning Petrochemical University", "orcid": "0009-0006-4431-9613"},
-    {"name": "Guan, Jian Jun", "affiliation": "Liaoning Petrochemical University"},
-    {"name": "Ren, Xiao", "affiliation": "Shanghai Dongluo Precise Machine Industrial Co., Ltd", "orcid": "0009-0000-4591-3098"},
-    {"name": "Sun, Xu Dong", "affiliation": "Fuxin Wanda Foundry (Group) Co., Ltd", "orcid": "0009-0005-8157-3787"},
-    {"name": "Zhao, Chao", "affiliation": "Liaoning Petrochemical University", "orcid": "0009-0004-6623-9871"},
-    {"name": "Ma, Jia Jun", "affiliation": "Liaoning Petrochemical University", "orcid": "0009-0000-4754-9891"},
-    {"name": "Wei, Zi Jian", "affiliation": "Liaoning Petrochemical University", "orcid": "0009-0003-4932-5703"},
-    {"name": "Liu, Zhi Zhuo", "affiliation": "Liaoning Petrochemical University", "orcid": "0009-0004-4526-3207"},
-    {"name": "Su, Jia Chen", "affiliation": "Liaoning Petrochemical University"},
-    {"name": "Yan, Wen Yi", "affiliation": "Liaoning Petrochemical University"}
+    {
+      "name": "Ma, Jia Jun",
+      "affiliation": "Liaoning Petrochemical University"
+    },
+    {
+      "name": "Lü, Bai Lin",
+      "affiliation": "Liaoning Petrochemical University",
+      "orcid": "0000-0002-8922-8399"
+    },
+    {
+      "name": "Li, Tian Xiang",
+      "affiliation": "Liaoning Petrochemical University"
+    },
+    {
+      "name": "Ren, Xiao",
+      "affiliation": "Shanghai Dongluo Precise Machine Industrial Co., Ltd"
+    },
+    {
+      "name": "Sun, Xu Dong",
+      "affiliation": "Fuxin Wanda Foundry (Group) Co., Ltd"
+    },
+    {
+      "name": "Zhao, Chao",
+      "affiliation": "Liaoning Petrochemical University"
+    },
+    {
+      "name": "Shang, Jia Bao",
+      "affiliation": "Liaoning Petrochemical University"
+    },
+    {
+      "name": "Wei, Zi Jian",
+      "affiliation": "Liaoning Petrochemical University"
+    },
+    {
+      "name": "Liu, Zhi Zhuo",
+      "affiliation": "Liaoning Petrochemical University"
+    },
+    {
+      "name": "Su, Jia Chen",
+      "affiliation": "Liaoning Petrochemical University"
+    },
+    {
+      "name": "Yan, Wen Yi",
+      "affiliation": "Liaoning Petrochemical University"
+    }
   ],
   "related_identifiers": [
     {

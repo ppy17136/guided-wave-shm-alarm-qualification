@@ -1,9 +1,9 @@
 {
   "schema_version": "shm-public-release-validation-v3",
-  "release_version": "1.0.2",
+  "release_version": "1.0.3",
   "status": "validated_public_release",
   "validation_date": "2026-08-16",
-  "file_count": 273,
+  "file_count": 276,
   "static_counts": {
     "python": 82,
     "json": 24,

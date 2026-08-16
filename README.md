@@ -6,7 +6,7 @@ Reproducibility package for **High AUROC Does Not Guarantee Reliable Alarms: Cal
 
 ## Status
 
-This repository provides the versioned analysis and reporting materials for release `v1.0.2`. The repository materials are distributed under the BSD-3-Clause license.
+This repository provides the versioned analysis and reporting materials for release `v1.0.3`. The repository materials are distributed under the BSD-3-Clause license.
 
 ## Included
 
@@ -27,6 +27,10 @@ Earlier frozen files use “preregistration” as project terminology. The proto
 ## Automated validation
 
 The repository includes a CPU-only GitHub Actions workflow, a static repository validator, six synthetic P12 alarm-qualification tests, two result-evidence checks, and a clean-room rebuild of all five manuscript figures. Run the commands in `REPRODUCE.md` after regenerating `SHA256SUMS.txt`. The reporting checks do not refit a model, move a threshold, or alter a frozen outcome.
+
+## v1.0.3 authorship metadata correction
+
+This release corrects authorship metadata only: Jian Jun Guan is removed, Jia Jun Ma is listed first and Jia Bao Shang seventh, and ORCID identifiers are omitted for all authors except Bai Lin Lü (`0000-0002-8922-8399`). No analysis code, score, threshold, denominator, gate, figure, or frozen scientific outcome changed.
 
 ## v1.0.2 reporting clarification
 
