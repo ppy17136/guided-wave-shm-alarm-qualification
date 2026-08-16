@@ -6,7 +6,7 @@
 4. Verify the committed repository with the commands below.
 5. Verify `SHA256SUMS.txt` after any intentional release rebuild.
 
-Reporting does not constitute a new optimization pass. The paired structural-energy bootstrap is explicitly post-outcome secondary uncertainty characterization. The acquisition-integrity file binds a pre-specified qualitative gate to existing metadata evidence and does not modify the frozen serializer or the P12 FAIL outcome.
+Reporting does not constitute a new optimization pass. The paired structural-energy bootstrap is explicitly post-outcome secondary uncertainty characterization. The acquisition-integrity file binds a pre-specified qualitative gate to existing metadata evidence and does not modify the recorded frozen outcome or the P12 FAIL conclusion.
 
 ## Environment
 

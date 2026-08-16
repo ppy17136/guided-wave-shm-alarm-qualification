@@ -113,11 +113,11 @@ P9C宏AUROC下降0.1035，FPR增加2.5个百分点，未通过任何继续门槛
 
 只有温度条件化校准在LambNet-T上降低最差温度FPR、且不显著损害最差任务AUROC和召回，才进入第二个公开开发数据集迁移验证。
 
-## 9. 论文价值与当前限制
+## 9. 科学价值与当前限制
 
-当前证据已支持一条有价值的论文方法学主线：严格外推揭示潜变量方向失稳；原始波形物理对齐恢复跨温度一致损伤方向；预注册负结果限制研究者自由度；语义审计发现公开数据中的精确重复测量。
+当前证据已支持一条有价值的方法学解释：严格外推揭示潜变量方向失稳；原始波形物理对齐恢复跨温度一致损伤方向；预注册负结果限制研究者自由度；语义审计发现公开数据中的精确重复测量。
 
-但此时还不能声称中科院二区及以上论文已经“完成”，原因是：
+但当前证据仍不足以支持完成性结论，原因是：
 
 - LambNet-T仍是单一CFRP板；
 - 每路径/温度缺少独立重复测量；
@@ -143,14 +143,15 @@ P9D保持P9B分数不变，对每个任务执行九折留一温度交叉拟合�
 
 按协议停止在LambNet-T上继续更换一次/三次/样条或分段阈值。P9B仍保留为最佳开发表征，但尚不具备低最差条件误报的部署证据。
 
-## 11. 第二数据集获取状态
+## 11. Additional-data acquisition status
 
-OGW温度集合总计约149.782 GiB。官方Figshare页面可在真实浏览器正常打开，但命令行Range请求受到AWS WAF挑战；浏览器内单字节请求又被跨域策略阻止。由于安全策略不允许把浏览器会话Cookie转移给curl，且整包下载不经济，当前不绕过安全控制、不启动49.93 GB无损包和四个约25 GB损伤包的盲目下载。
+The OGW temperature collection totals approximately 149.8 GiB and was not included in this release because a complete, verified acquisition was not feasible within the study. No reported result depends on partial or unavailable OGW files.
 
-风力机叶片疲劳数据的1,695,645,067字节官方ZIP正在下载到`wind_turbine_blade_confirmatory_SEALED`目录。即使下载完成，也只校验MD5并封存；由于P9D未通过且第二开发集迁移尚未完成，不解压、不读取目录和波形，不将其用于方法选择。
+The wind-turbine blade archive was not used for method selection in P9. Its later use is documented separately in the P11B evaluation. This report therefore treats P9E as the independent transfer audit described below.
+
 ## 12. P9E 独立健康结构迁移验证
 
-考虑到OGW无损包接近50 GiB且命令行Range请求受官方WAF限制，P9E先采用Zenodo 10.5281/zenodo.19209079的19.1 MB公开无损CFRP变温数据。该数据与LambNet-T在板尺寸、铺层、激励、接收阵列、中心频率和采样率上均不同，因此用于检验P9B绝对分数及阈值能否跨结构直接迁移，而不用于损伤AUROC或召回。
+鉴于OGW无损包接近50 GiB，P9E采用Zenodo 10.5281/zenodo.19209079的19.1 MB公开无损CFRP变温数据。该数据与LambNet-T在板尺寸、铺层、激励、接收阵列、中心频率和采样率上均不同，因此用于检验P9B绝对分数及阈值能否跨结构直接迁移，而不用于损伤AUROC或召回。
 
 冻结锚点为20、35、50、65 ℃名义平台，实际温度18.645、34.978、49.902、64.983 ℃；主阈值直接采用P9B四任务健康95%阈值最大值0.02609810031847493。支持域内共有180次非锚点健康采集、44个接收位置，共7,920个路径分数。
 

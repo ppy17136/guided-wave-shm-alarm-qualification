@@ -1,10 +1,10 @@
 {
   "title": "Guided-wave SHM alarm qualification: reproducibility package",
-  "description": "Versioned analysis code, frozen configurations, protocols, derived tables, integrity evidence, synthetic validation tests, and publication-figure builders supporting calibration- and support-aware validation of guided-wave structural health monitoring alarms under operational shift.",
+  "description": "Versioned analysis code, frozen configurations, protocols, derived tables, integrity evidence, synthetic validation tests, and publication-figure builders supporting calibration- and support-aware alarm qualification of guided-wave structural health monitoring under operational shift.",
   "upload_type": "software",
   "access_right": "open",
   "license": "BSD-3-Clause",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publication_date": "2026-08-16",
   "keywords": [
     "structural health monitoring",
@@ -12,7 +12,7 @@
     "alarm qualification",
     "operational shift",
     "calibration",
-    "support-aware validation",
+    "support-aware alarm qualification",
     "reproducibility"
   ],
   "creators": [

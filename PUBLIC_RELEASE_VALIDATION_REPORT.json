@@ -1,11 +1,11 @@
 {
-  "schema_version": "shm-public-release-validation-v3",
-  "release_version": "1.0.3",
+  "schema_version": "shm-public-release-validation-v4",
+  "release_version": "1.0.4",
   "status": "validated_public_release",
   "validation_date": "2026-08-16",
-  "file_count": 275,
+  "file_count": 270,
   "static_counts": {
-    "python": 82,
+    "python": 81,
     "json": 24,
     "yaml_and_cff": 78,
     "csv": 14,
@@ -24,7 +24,7 @@
   "clean_room_figure_rebuild": {
     "png": 5,
     "pdf": 5,
-    "committed_png_byte_identical": 5,
+    "committed_png_byte_identical_under_pinned_environment": 5,
     "status": "pass"
   },
   "metadata_gap_scope_accounting": {
@@ -46,5 +46,11 @@
   "privacy_or_secret_findings": [],
   "raw_data_or_archive_findings": [],
   "files_over_5_mib": [],
-  "checksum_errors": []
+  "checksum_errors": [],
+  "public_release_hygiene": {
+    "publication_strategy_markers": 0,
+    "empty_pycache_directories": 0,
+    "scientific_results_changed": false,
+    "temporary_downloader_scripts": 0
+  }
 }

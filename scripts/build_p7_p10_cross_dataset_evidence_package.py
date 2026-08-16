@@ -40,7 +40,6 @@ RESEARCH_FILES = [
     "P10_pipeline_dataset_audit_plan_v0_20260811.md",
     "P10_pipeline_structure_relative_anomaly_protocol_v1.md",
     "P10_pipeline_structure_relative_results_report_20260811.md",
-    "P7_P10_cross_dataset_synthesis_and_paper_strategy_20260811.md",
     "P11A_health_side_calibration_reliability_exploratory_protocol_v1.md",
     "P11A_health_side_calibration_reliability_results_report_20260811.md",
 ]

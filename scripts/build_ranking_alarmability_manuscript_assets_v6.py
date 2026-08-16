@@ -311,7 +311,7 @@ def gate_rows() -> list[dict[str, object]]:
         "supported_healthy_fpr_le_0_05": "Observed pass; 95% two-sided upper bound is 0.0903.",
         "healthy_false_alarm_blocks_le_2": "Observed pass; two-run margin under the frozen rule.",
         "supported_damage_recall_ge_0_80": "Would pass only if relaxed to about 0.50.",
-        "worst_temperature_recall_ge_0_60": "Fails for any positive threshold because T43 recall is zero.",
+        "worst_temperature_recall_ge_0_60": "Fails for any positive recall criterion because T43 recall is zero.",
         "worst_pressure_bin_recall_ge_0_60": "Would pass only near 0.30.",
         "macro_auc_ge_0_80": "Passes by 0.1890.",
         "worst_frequency_auc_ge_0_65": "Passes by 0.3211.",

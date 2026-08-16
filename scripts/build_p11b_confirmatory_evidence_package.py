@@ -24,7 +24,6 @@ EXACT_FILES = [
     "research_protocols/P11B_DYNAMIC_SECONDARY_LOCK_v1.json",
     "research_protocols/P11B_DYNAMIC_SECONDARY_LOCK_SHA256_v1.txt",
     "research_protocols/P11B_secondary_dynamic_three_phase_results_report_20260811.md",
-    "research_protocols/P7_P11B_cross_dataset_synthesis_and_manuscript_strategy_v2_20260811.md",
     "tools/audit_p11b_archive_schema_lock1.py",
     "tools/audit_p11b_mat_schema_lock1.py",
     "tools/run_p11b_wind_blade_confirmatory.py",

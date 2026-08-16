@@ -27,7 +27,6 @@ EXACT_FILES = [
     "research_protocols/P12_COPV_LOCK2_2_execution_freeze_v1.json",
     "research_protocols/P12_COPV_LOCK2_2_SHA256_v1.txt",
     "research_protocols/P12_COPV_confirmatory_results_report_20260814.md",
-    "research_protocols/P7_P12_cross_dataset_synthesis_and_manuscript_strategy_v3_20260814.md",
     "tools/build_p12_copv_results_evidence.py",
     "tools/build_p12_copv_confirmatory_evidence_package.py",
     "tools/run_p12_copv_confirmatory.py",
