@@ -120,7 +120,7 @@ def figure_1() -> None:
                           boxstyle="round,pad=0.05,rounding_size=0.08",
                           linewidth=1.5, edgecolor=AMBER, facecolor="#FFF5DE")
     ax.add_patch(ctrl)
-    ax.text(8.60, 6.78, "Simple physical\nbaseline", ha="center", va="top",
+    ax.text(8.60, 6.78, "Simple energy\nsurrogate", ha="center", va="top",
             fontsize=10.9, weight="bold", color="#8A5700", linespacing=1.05)
     ax.text(8.60, 5.76, "e.g., energy change", ha="center", va="top",
             fontsize=9.2, color="#5F4B25")

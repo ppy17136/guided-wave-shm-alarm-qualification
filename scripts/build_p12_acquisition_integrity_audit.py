@@ -33,11 +33,10 @@ def load(path: Path) -> dict:
 
 
 def file_digest(path: Path) -> str:
-    payload = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            payload.update(chunk)
-    return payload.hexdigest()
+    """Hash UTF-8 tabular content after platform-invariant newline normalization."""
+    payload = path.read_text(encoding="utf-8-sig")
+    canonical = payload.replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
 
 
 def build(

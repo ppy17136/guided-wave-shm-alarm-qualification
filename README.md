@@ -6,7 +6,7 @@ Reproducibility package for **High AUROC Does Not Guarantee Reliable Alarms: Cal
 
 ## Status
 
-This repository provides the versioned analysis and reporting materials for release `v1.0.4`. The repository materials are distributed under the BSD-3-Clause license.
+This repository provides the versioned analysis and reporting materials for release `v1.0.5`. The repository materials are distributed under the BSD-3-Clause license.
 
 ## Included
 
@@ -28,9 +28,9 @@ Earlier frozen files use “preregistration” as project terminology. The proto
 
 The repository includes a CPU-only GitHub Actions workflow, a static repository validator, six synthetic P12 alarm-qualification tests, two result-evidence checks, and a clean-room rebuild of all five manuscript figures. Run the commands in `REPRODUCE.md` after regenerating `SHA256SUMS.txt`. The reporting checks do not refit a model, move a threshold, or alter a frozen outcome.
 
-## v1.0.4 clean public release
+## v1.0.5 publication synchronization
 
-This release narrows the reviewer-facing repository to scientific reproducibility evidence, aligns article and repository terminology, removes a temporary download workaround, and clarifies that byte-identical figure rebuilding is tied to the pinned validation environment. No analysis code, score, threshold, denominator, gate criterion, figure content, or frozen scientific outcome changed. Historical releases remain available through immutable tags and archived Zenodo records.
+This release synchronizes Figure 1, machine-readable study-role terminology, and reported structural-versus-energy precision with the submitted article. It also clarifies the claim-scope field in the confirmatory/exploratory ledger. No model-fitting or score-generating logic, score, threshold, denominator, gate criterion, author metadata, or frozen scientific outcome changed. Historical releases remain available through immutable tags and archived Zenodo records.
 
 ## v1.0.2 reporting clarification
 
