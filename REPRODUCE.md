@@ -35,7 +35,7 @@ python scripts/build_p12_structural_energy_uncertainty.py --check
 python scripts/build_p12_acquisition_integrity_audit.py --check
 ```
 
-The first command exactly recomputes the committed 10,000-resample paired condition-level bootstrap from `p12_condition_level_results.csv`. The second verifies equal representative sampling/frequency/channel regimes, the 540-file schema summary, and the documented missing-metadata abstentions for gate 13.
+The first command exactly recomputes the committed 10,000-resample paired condition-level bootstrap from `p12_condition_level_results.csv`. The second verifies equal representative sampling/frequency/channel regimes, the 540-file schema summary, and the documented missing-metadata disposition for gate 13, including the distinction between 32 raw-archive gaps, 30 in-grid support abstentions (28 at T37 and two at T55), and two additional T37 files outside the formal condition table. The campaign contains 420 feature records and 419 formal conditions after one official exclusion.
 
 ## Clean-room manuscript-asset rebuild
 

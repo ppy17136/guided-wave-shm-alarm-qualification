@@ -94,10 +94,6 @@ def figure_1() -> None:
     ax.set_xlim(0, 10)
     ax.set_ylim(0, 10)
     ax.axis("off")
-    ax.text(0, 9.65, "High AUROC ≠ reliable alarms", fontsize=18,
-            weight="bold", color=NAVY, va="top")
-    ax.text(0, 9.05, "Qualification is a chain: failure at any required layer limits the claim.",
-            fontsize=10.5, color=GRAY, va="top")
 
     layers = [
         ("1  Representation", "Score reproducible?"),
@@ -107,7 +103,7 @@ def figure_1() -> None:
         ("5  Alarm decision", "FPR / recall acceptable?"),
     ]
     colors = ["#DCE6F1", "#C6E0F5", "#CDE9E3", "#FCE4C2", "#F7D0CB"]
-    y = 8.2
+    y = 9.2
     for index, ((title, question), color) in enumerate(zip(layers, colors)):
         box = FancyBboxPatch((0.15, y - 0.85), 6.78, 1.03,
                              boxstyle="round,pad=0.03,rounding_size=0.08",
@@ -189,9 +185,7 @@ def figure_2() -> None:
             label = "N/A" if np.isnan(value) else f"{value:.3f}"
             color = "#4B5563" if np.isnan(value) else ("white" if value < 0.25 or value > 0.78 else "black")
             ax.text(j, i, label, ha="center", va="center", fontsize=10.5, weight="bold", color=color)
-    ax.set_title("Cross-dataset evidence with all color directions aligned", fontsize=14, weight="bold", color=NAVY, pad=14)
-    ax.text(0.5, 1.005, "Green always means a more favourable value; grey denotes an inapplicable or unavailable endpoint.",
-            transform=ax.transAxes, ha="center", va="bottom", fontsize=9.3, color=GRAY)
+
     cbar = fig.colorbar(im, ax=ax, fraction=0.035, pad=0.03)
     cbar.set_label("More favourable  ->", rotation=90)
     ax.set_xticks(np.arange(-0.5, 3, 1), minor=True)
@@ -226,10 +220,7 @@ def figure_3() -> None:
     ax.set_ylim(-0.03, 1.03)
     ax.set_xlabel("Ranking AUROC", fontsize=11)
     ax.set_ylabel("Recall at the frozen healthy-only decision rule", fontsize=11)
-    ax.set_title("High ranking can coexist with weak or disqualified alarms", fontsize=14, weight="bold", color=NAVY)
     ax.grid(alpha=0.22)
-    ax.text(0.485, 0.98, "Marker shapes aid visual separation only;\nthey do not encode a common pass/fail boundary.",
-            fontsize=9.2, color=GRAY, va="top")
     save(fig, "fig03_ranking_vs_frozen_alarm_recall")
 
 
@@ -271,7 +262,7 @@ def figure_4() -> None:
     ax.grid(axis="y", alpha=0.2)
     for bar, value in zip(bars, values):
         ax.text(bar.get_x() + bar.get_width() / 2, value + 0.035, f"{value:.3f}", ha="center", fontsize=9.5, weight="bold")
-    fig.suptitle("P12 failure is localized to support and conditional sensitivity", fontsize=14, weight="bold", color=NAVY, y=1.02)
+
     save(fig, "fig04_p12_operating_envelope")
 
 
@@ -352,8 +343,7 @@ def figure_5(rows: list[dict[str, object]]) -> None:
                 color=GREEN if row["outcome"] == "PASS" else RED)
         ax.text(1, i, str(row["observed"]), ha="center", va="center",
                 fontsize=9.0, color="#263238")
-    ax.set_title("P12 conjunctive qualification: 7 of 13 mandatory gates passed", fontsize=14,
-                 weight="bold", color=NAVY, pad=14)
+
     ax.set_xlim(-0.55, 1.55)
     ax.tick_params(length=0)
     for spine in ax.spines.values():
@@ -362,7 +352,7 @@ def figure_5(rows: list[dict[str, object]]) -> None:
     ax.set_yticks(np.arange(-0.5, len(rows), 1), minor=True)
     ax.grid(which="minor", color="white", linewidth=1.5)
     ax.tick_params(which="minor", bottom=False, left=False)
-    fig.subplots_adjust(left=0.43, right=0.96, top=0.90, bottom=0.08)
+    fig.subplots_adjust(left=0.43, right=0.96, top=0.97, bottom=0.08)
     save(fig, "fig05_p12_gate_dashboard")
 
 def interval_table() -> list[dict[str, object]]:

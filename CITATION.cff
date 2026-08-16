@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "Please cite the archived software release and the associated article."
 title: "Guided-wave SHM alarm qualification: reproducibility package"
-version: "1.0.1"
-date-released: 2026-08-15
+version: "1.0.2"
+date-released: 2026-08-16
 license: "BSD-3-Clause"
 repository-code: "https://github.com/ppy17136/guided-wave-shm-alarm-qualification"
 doi: "10.5281/zenodo.21944979"

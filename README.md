@@ -6,7 +6,7 @@ Reproducibility package for **High AUROC Does Not Guarantee Reliable Alarms: Cal
 
 ## Status
 
-This repository provides the versioned analysis and reporting materials for release `v1.0.1`. The repository materials are distributed under the BSD-3-Clause license.
+This repository provides the versioned analysis and reporting materials for release `v1.0.2`. The repository materials are distributed under the BSD-3-Clause license.
 
 ## Included
 
@@ -27,6 +27,10 @@ Earlier frozen files use “preregistration” as project terminology. The proto
 ## Automated validation
 
 The repository includes a CPU-only GitHub Actions workflow, a static repository validator, six synthetic P12 alarm-qualification tests, two result-evidence checks, and a clean-room rebuild of all five manuscript figures. Run the commands in `REPRODUCE.md` after regenerating `SHA256SUMS.txt`. The reporting checks do not refit a model, move a threshold, or alter a frozen outcome.
+
+## v1.0.2 reporting clarification
+
+The raw archive contains 32 irreversible-state files with missing environmental metadata. Thirty files appear in the frozen campaign's formal condition table and were counted as support abstentions (28 T37 records and two T55 random-ramp records); two additional T37 files are outside that table and therefore do not enter its denominators. The campaign produced 420 feature records and 419 formal condition records after one official exclusion. This scope clarification and the caption-deduplicated publication figures do not change any score, threshold, gate, denominator, or the strict P12 FAIL outcome.
 
 ## Release controls
 

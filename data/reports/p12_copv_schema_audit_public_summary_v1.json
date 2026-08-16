@@ -54,7 +54,19 @@
       "core_waveform_channel_and_sampling_fields_present": true,
       "explained": true,
       "explanation": "The official source documentation recorded unavailable irreversible-damage logs for both T37 ramps and selected T55 random-ramp records.",
-      "routed_to_abstention": true
+      "evaluation_scope_disposition": {
+        "in_frozen_evaluation_grid_and_counted_as_support_abstentions": 30,
+        "in_grid_by_temperature_c": {
+          "37": 28,
+          "55": 2
+        },
+        "outside_frozen_evaluation_grid_and_excluded_from_denominators": 2,
+        "outside_grid_by_temperature_c": {
+          "37": 2,
+          "55": 0
+        }
+      },
+      "disposition_fully_documented": true
     }
   ],
   "symmetric_controls": [

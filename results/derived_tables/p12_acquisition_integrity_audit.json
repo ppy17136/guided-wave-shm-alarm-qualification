@@ -11,7 +11,9 @@
     "raw_acquisition_shape_equal_across_states": true,
     "official_schema_inventory_covers_540_files": true,
     "core_channel_and_sampling_schema_equal_in_all_states": true,
-    "known_metadata_gaps_explained_and_abstained": true,
+    "known_metadata_gaps_explained_and_disposition_documented": true,
+    "formal_condition_table_has_419_records": true,
+    "metadata_gap_reporting_scope_fully_accounted": true,
     "zero_unexplained_state_specific_differences": true
   },
   "observed_sampling_frequency_hz_by_state": {
@@ -105,9 +107,43 @@
       "core_waveform_channel_and_sampling_fields_present": true,
       "explained": true,
       "explanation": "The official source documentation recorded unavailable irreversible-damage logs for both T37 ramps and selected T55 random-ramp records.",
-      "routed_to_abstention": true
+      "evaluation_scope_disposition": {
+        "in_frozen_evaluation_grid_and_counted_as_support_abstentions": 30,
+        "in_grid_by_temperature_c": {
+          "37": 28,
+          "55": 2
+        },
+        "outside_frozen_evaluation_grid_and_excluded_from_denominators": 2,
+        "outside_grid_by_temperature_c": {
+          "37": 2,
+          "55": 0
+        }
+      },
+      "disposition_fully_documented": true
     }
   ],
+  "reporting_scope_clarification": {
+    "raw_archive_metadata_gap_files": 32,
+    "raw_archive_by_temperature_c": {
+      "37": 30,
+      "55": 2
+    },
+    "frozen_feature_records_expected": 420,
+    "formal_condition_records_after_official_exclusion": 419,
+    "official_exclusion_records": 1,
+    "in_frozen_evaluation_grid_and_counted_as_support_abstentions": 30,
+    "in_grid_by_temperature_c": {
+      "37": 28,
+      "55": 2
+    },
+    "outside_frozen_evaluation_grid_and_excluded_from_denominators": 2,
+    "outside_grid_by_temperature_c": {
+      "37": 2,
+      "55": 0
+    },
+    "scope_accounted": true,
+    "scientific_effect": "none_reporting_scope_clarification_only"
+  },
   "unexplained_state_specific_differences": [],
   "unexplained_difference_count": 0,
   "source_evidence": [
@@ -117,7 +153,11 @@
     },
     {
       "path": "data/reports/p12_copv_schema_audit_public_summary_v1.json",
-      "sha256": "3cdd1db38a5e58c7bfb1d9c024e95b70b75048c2c371d4d3cc6fe631749a0062"
+      "sha256": "ed9c2337433e838cd45a0e5ae3dd00208d5579f62063eee7c67e6bd2fbc07683"
+    },
+    {
+      "path": "results/derived_tables/p12_condition_level_results.csv",
+      "sha256": "66f65e9f9d09ace5de7d58a2d981d3d00e1b94a869a4a1df8e11a06aae93798b"
     }
   ],
   "provenance_note": "The frozen execution serializer stored this pre-specified qualitative gate as a Boolean. This post-outcome file binds that Boolean to auditable pre-existing metadata records; it does not modify a score, threshold, denominator, gate criterion, or the strict P12 FAIL outcome."

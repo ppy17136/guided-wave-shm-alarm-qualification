@@ -1,9 +1,9 @@
 {
-  "schema_version": "shm-public-release-validation-v2",
-  "release_version": "1.0.0",
+  "schema_version": "shm-public-release-validation-v3",
+  "release_version": "1.0.2",
   "status": "validated_public_release",
-  "validation_date": "2026-08-15",
-  "file_count": 271,
+  "validation_date": "2026-08-16",
+  "file_count": 273,
   "static_counts": {
     "python": 82,
     "json": 24,
@@ -24,6 +24,23 @@
   "clean_room_figure_rebuild": {
     "png": 5,
     "pdf": 5,
+    "committed_png_byte_identical": 5,
+    "status": "pass"
+  },
+  "metadata_gap_scope_accounting": {
+    "raw_archive": 32,
+    "frozen_feature_records": 420,
+    "formal_condition_records_after_official_exclusion": 419,
+    "in_frozen_evaluation_grid_support_abstentions": 30,
+    "in_grid_by_temperature_c": {
+      "37": 28,
+      "55": 2
+    },
+    "outside_frozen_evaluation_grid": 2,
+    "outside_grid_by_temperature_c": {
+      "37": 2,
+      "55": 0
+    },
     "status": "pass"
   },
   "privacy_or_secret_findings": [],
