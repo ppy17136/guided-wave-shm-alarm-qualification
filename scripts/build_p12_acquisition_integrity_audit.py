@@ -157,7 +157,9 @@ def main() -> None:
             raise RuntimeError("Committed acquisition-integrity audit differs from recomputed evidence")
     else:
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(json.dumps(result, indent=2), encoding="utf-8")
+        # Write deterministic UTF-8/LF bytes on every platform so the
+        # repository checksum is identical on Windows and Linux checkouts.
+        args.output.write_bytes(json.dumps(result, indent=2).encode("utf-8"))
     print(json.dumps(result, indent=2))
     if not result["gate_pass"]:
         raise SystemExit(1)
